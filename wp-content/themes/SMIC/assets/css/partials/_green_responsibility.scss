@@ -1,0 +1,276 @@
+.page-id-1423 {
+	.second-stack,.avg-water-container {
+		position: relative;
+    display: flex;
+    @include breakpoint(tabletPortrait) {
+    	height: 65vw;
+    }
+    @include breakpoint(mobile) {
+    	height: 120vw;
+    }
+    @include breakpoint(iPhoneSix) {
+    	height: 150vw;
+    }
+    .second-stack-container  {
+    	@include breakpoint(tabletPortrait) {
+    		flex-direction: column;
+    	}
+    	& > div {
+		  	@include breakpoint(tabletPortrait) {
+		  		max-width: 100%;
+		  		flex-basis: 100%;
+		  	}	
+    	}
+    }
+		.overlay {
+			background-color: #000;
+	    opacity: 0.5;
+	    z-index: 0;
+	    height: 100%;
+	    width: 100%;
+	    background-color: black;
+	    position: absolute;
+	    opacity: 0.45;
+	    top: 0;
+		}
+		.title {
+			color: #FFF;
+			font-family: $avenirNext_Bold;
+			font-size: 22px;
+			@include breakpoint(tabletPortrait) {
+				font-size: 18px;
+			}
+			@include breakpoint(mobile) {
+				font-size: 16px;
+			}
+		}
+		.desc {
+			color: #FFF;
+			font-family: $avenirNext_Regular;
+			font-size: 16px;
+			@include breakpoint(tabletPortrait) {
+				font-size: 14px;
+			}
+		}
+	}
+	.avg-water-container {
+		padding: 0;
+		.smph-inner-subcontainer {
+			z-index: 1;
+			width: 100%;
+	    display: flex;
+	    justify-content: flex-end;
+	    @include breakpoint(tabletPortrait) {
+	    	justify-content: center;
+	    }
+		}
+		.title {
+			text-align: center;
+			font-size: 22px;
+			margin-bottom: 30px;
+			@include breakpoint(tabletPortrait) {
+				font-size: 18px;
+			}
+			@include breakpoint(mobile) {
+				font-size: 16px;
+			}
+		}
+		.body-wrapper {
+	    display: flex;
+	    flex-wrap: wrap;
+	    .water-wrapper {
+	    	flex-basis: 50%;
+	    	color: #FFF;
+	    	text-align: center;
+	    	@include breakpoint(mobile) {
+	    		margin: 15px 0;
+	    	}
+				.count {
+					font-family: $avenirNext_Demi;
+					font-size: 39px;
+					margin: 0;
+					@include breakpoint(tabletPortrait) {
+						font-size: 26px;
+					}
+				}
+				.description {
+					font-family: $avenirNext_Regular;
+					font-size: 18px;
+					margin: 0;
+					@include breakpoint(tabletPortrait) {
+						font-size: 14px;
+					}
+				}
+	    }
+		}
+	}
+	.green-responsibility-wrapper {
+
+		border-top: 1px solid $asparagus_green;
+
+		&.third-stack {
+			border-top: 0;
+		}
+
+		.col-md-6 {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		.title {
+			color: $asparagus_green;
+			font-family: $avenirNext_Bold;
+			font-size: 20px;
+			margin-bottom: 1rem;
+			&.bigger-title {
+				font-size: 26px;
+			}
+			@include breakpoint(tabletPortrait) {
+				font-size: 18px;
+			}
+		}
+		p {
+			font-family: $avenirNext_Regular;
+			font-size: 16px;
+			@include breakpoint(tabletPortrait) {
+				font-size: 14px;
+			}
+		}
+		.slick-here {
+			max-width: 80%;
+			margin: auto;
+			.slick-prev {
+				left: -40px;
+			}
+			.slick-next {
+				right: -40px;
+			}
+		}
+		img {
+			width: 400px;
+			height: auto;
+			@include breakpoint(mobile) {
+				width: 100%;
+			}
+		}
+		.slick-arrow {
+			&.slick-prev,
+			&.slick-next {
+				&::before {
+					color: #8c962e;
+				}
+			}
+		}
+	}
+	.scopes-wrapper {
+		border: 1px solid $asparagus_green;
+    padding: 20px 30px;
+    margin: 25px 0;
+    .scope {
+    	display: flex;
+    	justify-content: start;
+    	margin-bottom: 5px;
+    	@include breakpoint(mobile) {
+				flex-direction: column;
+				align-items: start;
+    	}
+    }
+    .box-wrapper {
+    	display: flex;
+	    justify-content: center;
+	    align-items: start;
+      margin-right: 5px;
+    	strong {
+    		white-space: nowrap;
+    	}
+  		span {
+	    	@include breakpoint(mobile) {
+    			display: none;
+    		}
+    	}
+    }
+    .box {
+    	max-width: 15px;
+    	min-width: 15px;
+    	max-height: 15px;
+    	min-height: 15px;
+	    background-color: $asparagus_green;
+	    margin-top: 2.5px;
+	    margin-right: 8px;
+	    &.scope-1 {
+	    	background-color: #927d40;
+	    }
+	    &.scope-2 {
+	    	background-color: #bdc37f;
+	    }
+	    &.scope-3 {
+	    	background-color: #7d8900;
+	    }
+    }
+    p {
+    	margin: 0;
+    	font-family: $avenirNext_Regular;
+    	font-size: 16px;
+    	@include breakpoint(tabletPortrait) {
+    		font-size: 14px;
+    	}
+    	strong {
+    		font-family: $avenirNext_Bold;
+    	}
+    }
+	}
+}
+
+.bdo-sustainable-energy-finance {
+	.title {
+		color: #0da79f !important;
+		text-transform: unset !important;
+	}
+}
+
+.bdo-sustainable-energy-finance-parallax {
+	position: relative;
+  display: flex;
+  @include breakpoint(tabletPortrait) {
+  	height: 65vw !important;
+  }
+  @include breakpoint(iPhoneSix) {
+  	height: 100vw !important;
+  }
+	.overlay {
+		background-color: #000;
+    opacity: 0.5;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    opacity: 0.45;
+    top: 0;
+	}
+  .bdo-energy-finance-wrapper {
+  	color: #FFF;
+		text-align: center;
+		@include breakpoint(tabletPortrait) {
+			max-width: 50%;
+			flex-basis: 50%;
+		}
+  }
+	.count {
+		font-family: $avenirNext_Demi;
+		color: #FFF;
+		font-size: 39px;
+		margin: 0;
+		@include breakpoint(tabletPortrait) {
+			font-size: 26px;
+		}
+	}
+	.name {
+		font-family: $avenirNext_Regular;
+		font-size: 18px;
+		margin: 0;
+		@include breakpoint(tabletPortrait) {
+			font-size: 14px;
+		}
+	}
+}

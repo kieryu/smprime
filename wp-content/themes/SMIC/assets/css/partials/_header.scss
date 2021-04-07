@@ -1,0 +1,219 @@
+.main-header {
+	background-color: #FFF;
+	.navbar-brand {
+		margin-bottom: 0;
+		img {
+			max-width: 180px;
+			height: auto;
+			width: 100%;
+			@include breakpoint(tabletPortrait) {
+				max-width: 150px;
+			}
+			@include breakpoint(mobile) {
+				max-width: 120px;
+			}
+		} 
+	}
+	.navbar {
+		padding: 8px 0;
+	}
+	.navbar-nav {
+		margin-left: auto;
+		.menu-item {
+			// margin: 0 6px;
+			&.show {
+				@extend .transition;
+				background-color: transparent;
+				@include breakpoint(mobileLg) {
+					background-color: $dark_blue;
+				}
+				& > a {
+					@include breakpoint(mobileLg) {
+						color: #FFF !important;
+					}
+				}
+			}
+			a {
+				font-family: $avenirNext_Regular;
+				font-size: 16px;
+				color: $dark_blue;
+				padding: 34px 15px;
+				text-decoration: none;
+				@include breakpoint(tabletPortrait) {
+					font-size: 14px;
+				}
+				&:hover,&:active,&:focus {
+					color: $blue;
+				}
+				@include breakpoint(mobileLg) {
+					display: block;
+					width: 100%;
+					padding: 6px 0;
+					padding-left: 15px;
+				}
+			}
+			// &.dropdown {
+			// 	&:hover {
+			// 		.dropdown-menu {
+			// 			display: block;
+			// 		}
+			// 	}
+			// }
+		}
+	}
+	.dropdown {
+    // .dropdown-menu {
+    //     transition: all 0.5s;
+    //     overflow: hidden;
+    //     transform-origin: top center;
+    //     height: 0;
+    //     display: block;
+    // }
+    // &:hover {
+    //     .dropdown-menu {
+    //         height: 300px;
+    //     }
+    // }
+
+		position: static;
+		@include breakpoint(mobileLg) {
+			// display: flex;
+	  //   align-items: center;
+	  //   justify-content: space-between;
+	  //   flex-wrap: wrap;
+		}
+		.dropdown-toggle {
+			&::after {
+				display: none;
+			}
+		}
+		.dropdown-menu {
+			left: -5.56%;
+			right: -5.56%;
+			border: 0;
+			border-radius: 0;
+			margin-top: 0;
+			background-color: rgba(214, 220, 229, 0.95);
+			padding: 25px 15px;
+			@include breakpoint(mobileLg) {
+		    padding: 10px 20px;
+		    flex-basis: 100%;
+			}
+		}
+		.submenu-content {
+			display: flex;
+			justify-content: center;
+	    align-items: start;
+			@include breakpoint(mobileLg) {
+		    justify-content: normal;
+			}
+			.submenu-title {
+				min-width: 120px;
+				margin: 0;
+		    // margin-left: 180px;
+				font-size: 20px;
+				font-family: $avenirNext_Bold;
+				color: $dark_blue;
+				@include breakpoint(mobileLg) {
+					display: none;
+				}
+			}
+			ul {
+				list-style: none;
+				column-count: 2;
+		    column-width: 200px;
+				@include breakpoint(mobileLg) {
+					padding: 0;
+					column-count: 1;
+
+				}
+			}
+			li {
+				margin-bottom: 5px;
+				&.mobile-display {
+					display: none;
+					@include breakpoint(mobile) {
+						display: block;
+					}
+				}
+			}
+			.submenu-link {
+				font-size: 16px;
+				font-family: $avenirNext_Regular;
+				color: $dark_blue;
+				padding: 0;
+				@include breakpoint(tabletPortrait) {
+					font-size: 14px;
+				}
+				&:hover,&:active,&:focus {
+					color: $blue;
+					// text-decoration: underline;
+				}
+				@include breakpoint(mobileLg) {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	.navbar-toggler {
+		color: $blue;
+		outline: 0;
+	}
+	// .navbar-collapse {
+	// 	@extend .transition;
+	// 	@include breakpoint(mobile) {
+	// 		left: -100%;
+	// 		position: fixed;
+	// 		top: 0;
+	// 		bottom:0;
+	// 		width: 100%;
+	// 		background-color: $blue;
+	// 		display: flex;
+	// 		align-items: center;
+	// 		justify-content: center;
+	// 		z-index: 2;
+	// 	}
+	// 	&.show {
+	// 		@include breakpoint(mobile) {
+	// 			left: 0;
+	// 		}
+	// 	}
+	// 	ul {
+	// 		@include breakpoint(mobile) {
+	// 			margin: 0;
+	// 		}
+	// 	}
+	// }
+
+	.smph_search_input {
+		width: 0;
+		border: 0;
+    padding: 0;
+    outline: 0;
+    border-bottom: 1px solid $blue;
+    font-family: $avenirNext_Regular;
+    font-size: 14px;
+    @include breakpoint(mobileLg) {
+    	width: 200px !important;
+    	border: 1px solid $blue;
+			padding: 5px 10px;
+			border-radius: 3px;
+    }
+	}
+	.smph_search_button {
+		margin: 0;
+		color: $blue;
+		cursor: pointer;
+		@include breakpoint(mobileLg) {
+			margin-left: -30px;
+		}
+	}
+
+	.smph_search {
+		@include breakpoint(mobileLg) {
+			margin-left: 15px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+	}
+}

@@ -1,0 +1,230 @@
+.taxonomy-wrapper,.page-id-448 {
+	.content-title-wrapper {
+		.page-title {
+			font-size: 22px;
+	    margin-bottom: 20px;
+	    font-family: $avenirNext_Bold;
+	    color: $blue;
+		}
+	}
+
+	#featuredArticle,.featured-carousel {
+		max-height: 25vw;
+		min-height: 25vw;
+		@include breakpoint(tabletLandscape) {
+			max-height: 32vw;
+	    min-height: 32vw;
+		}
+		@include breakpoint(tabletPortrait) {
+			max-height: none;
+			min-height: 0;
+		}
+		.carousel-indicators {
+			bottom: -10%;
+			@include breakpoint(mobile) {
+				bottom: -10%;
+			}
+			li {
+				height: 10px;
+		    width: 10px;
+		    margin: 0 8px;
+		    background-color: #EBEBEB;
+		    opacity: 1;
+		    &.active {
+		    	background-color: $blue;
+		    }
+			}
+		}
+	}
+
+	.latest-update-wrapper {
+		display: flex;
+		@include breakpoint(tabletPortrait) {
+			flex-direction: column;
+		}
+		.left-content {
+			flex-basis: 40%;
+		}
+		.right-content {
+			flex-basis: 60%;
+		}
+		& > div {
+			flex: 1;
+			@include breakpoint(tabletLandscape) {
+				flex-basis: 50% !important;
+			}
+			img {
+				width: 100%;
+				height: 25vw;
+				object-fit: cover;
+				@include breakpoint(tabletPortrait) {
+					height: 50vw;
+				}
+			}
+		}
+		.media-content {
+			padding: 15px 50px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: baseline;
+			@include breakpoint(tabletPortrait) {
+				padding: 15px;
+			}
+			@include breakpoint(mobile) {
+				padding: 15px 0;			
+			}
+			.time {
+				font-family: $avenirNext_Regular;
+				font-size: 14px;
+				color: #5B5B5B;
+				margin: 0;
+			}
+			.title {
+				font-family: $avenirNext_Bold;
+				font-size: 18px;
+				margin: 10px 0;
+				a {
+					text-decoration: none;
+					color: $blue;
+				}
+			}
+			p {
+				font-family: $avenirNext_Regular;
+				font-size: 16px;
+				color: #414141;
+				@include breakpoint(tabletPortrait) {
+					font-size: 14px;
+				}
+			}
+			.btn-link {
+				margin-top: 15px;
+			}
+		}
+	}
+
+
+	.other-articles {
+		margin: 50px 0 0;
+		@include breakpoint(mobile) {
+			margin-top: 50px;
+		}
+		&.no-featured-article {
+			margin-top: 0;
+		}
+		.row > div {
+			margin-top: 50px;
+			&:first-of-type {
+				@include breakpoint(mobile) {
+					margin-top: 0 !important;
+				}
+			}
+			&:nth-of-type(-n+3) {
+				margin-top: 0;
+				@include breakpoint(mobile) {
+					margin-top: 50px;
+				}
+			}
+		}
+		.other-articles-wrapper {
+			overflow: hidden;
+	    height: 100%;
+	    display: flex;
+	    flex-direction: column;
+	    text-decoration: none;
+			img {
+				width: 100%;
+				height: 20vw;
+				object-fit: cover;
+				@include breakpoint(mobile) {
+					height: 65vw;
+				}
+			}
+		}
+		.other-articles-info {
+			height: 100%;
+			display: flex;
+	    flex-direction: column;
+	    align-items: baseline;
+	    border-bottom: 1px solid $blue;
+			.time {
+				font-family: $avenirNext_Regular;
+				color: #414141;
+				font-size: 16px;
+				margin: 15px 0 0;
+			}
+			.other-articles-title {
+				font-family: $avenirNext_Demi;
+				font-size: 18px;
+				color: $blue;
+				margin: 0 0 15px;
+				text-decoration: none;
+			}
+		}
+	}
+
+}
+
+
+.tax-green_movement_cat {
+	.taxonomy-wrapper {
+		.content-title-wrapper {
+			.page-title {
+				color: $green;
+			}
+		}
+		.latest-update-wrapper {
+			.media-content {
+				.title {
+					a {
+						color: $green;
+					}
+				}
+			}
+		}
+		.smph-btn {
+			background-color: $green;
+			&:hover {
+				background-color: #44ca3c;
+			}
+		}
+		.other-articles {
+			.other-articles-info {
+				border-color: $green;
+			 .other-articles-title {
+			 	color: $green;
+			 }
+			}
+		}
+	}
+	.load-more-wrapper {
+		.load-more-btn {
+			background-color: $green;
+			&:hover {
+				background-color: #44CA3C;
+			}
+		}
+	}
+	.featured-video {
+		.featured-video-info {
+			background-color: #F6FDF5;
+			.title {
+				color: $green;
+			}
+			.smph-btn {
+				background-color: $green;
+				&:hover {
+					background-color: #44CA3C;
+				}
+			}
+		}
+	}
+}
+
+.load-more-wrapper {
+	text-align: center;
+	margin-top: 30px;
+	.load-more-btn {
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,109 @@
+.page-id-304 {
+	h2 {
+		margin-bottom: 30px;
+	}
+	.wp-block-image {
+		margin: 30px 0;
+	}
+}
+
+.board-of-directors {
+	p {
+		max-width: none;
+		margin: 0 0 1rem;
+		font-family: $avenirNext_Regular;
+		font-size: 16px;
+		@include breakpoint(tabletPortrait) {
+			font-size: 14px;
+		}
+	}
+	.bod-wrapper {
+		margin-bottom: 50px;
+		.title-wrapper {
+			margin-bottom: 25px;
+			border-bottom: 2px solid $blue;
+			padding-bottom: 15px;
+		}
+		.bod-name {
+			font-family: $avenirNext_Bold;
+			font-size: 22px;
+			color: $dark_blue;
+			margin: 0;
+			@include breakpoint(tabletPortrait) {
+				font-size: 20px;
+			}
+			@include breakpoint(mobile) {
+				font-size: 20px;
+			}
+		}
+	}
+	.body-wrapper {
+		display: flex;
+		@include breakpoint(mobile) {
+			flex-direction: column-reverse;
+			text-align: center;
+		}
+		.bod-details {
+			flex-basis: 74%;
+			.bod-info {
+				margin-bottom: 2rem;
+			}
+			strong {
+				font-family: $avenirNext_Bold;
+			}
+		}
+		.position {
+			font-family: $avenirNext_Bold;
+			font-size: 18px;
+			color: #000;
+			margin: 0;
+			@include breakpoint(mobile) {
+				font-size: 16px;
+			}
+		}
+		.age {
+			font-size: 16px;
+			font-family: $avenirNext_Regular;
+			margin: 0;
+			@include breakpoint(mobile) {
+				font-size: 14px;
+			}
+		}
+		p {
+	    margin: 0 0 2.5rem;
+	    font-size: 16px;
+			@include breakpoint(tabletPortrait) {
+				font-size: 14px;
+			}
+		}
+		.bod-img {
+			flex-basis: 26%;
+			padding-left: 50px;
+			@include breakpoint(mobile) {
+				padding-left: 0;
+			}
+			img {
+				width: 270px;
+				height: 270px;
+				@include breakpoint(mobile) {
+					width: 50%;
+			    min-width: 250px;
+				}
+			}
+		}
+	}
+}
+
+.filter-bod-container {
+	max-width: 50%;
+  margin: auto;
+  @include breakpoint(mobile) {
+  	max-width: 85%;
+  }
+  select {
+  	font-family: $avenirNext_Regular;
+  	font-size: 16px;
+  	outline: 0 !important;
+  	box-shadow: none !important;
+  }
+}

@@ -1,0 +1,14 @@
+@keyframes move {
+  from {right: -5%;}
+  to {right: 100%;}
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+@keyframes moveLeft {
+  from {left: -5%;}
+  to {left: 100%;}
+}

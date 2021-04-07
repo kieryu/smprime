@@ -1,0 +1,296 @@
+.ip-cd-download {
+	margin-top: 50px;
+	.ip-cd-download-container {
+		padding-top: 25px;
+	}
+	.smph-stocks-wrapper {
+		background-color: #f2f2f2;
+		height: 100%;
+		padding: 30px;
+		display: flex;
+    flex-direction: column;
+    .section-body {
+    	margin: auto 0;
+    }
+	}
+	.stocks-wrapper {
+		margin-bottom: 15px;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		label {
+			font-size: 16px;
+			font-family: $avenirNext_Regular;
+			margin: 0;
+		}
+		p {
+			margin: 0;
+			font-size: 14px;
+			font-family: $avenirNext_Regular;
+			strong {
+				font-family: $avenirNext_Bold;
+			}
+			&.subvalue {
+				font-size: 16px;
+			}
+			&.value {
+				color: $blue;
+				font-size: 24px;
+			}
+		}
+	}
+}
+
+.inv-overview {
+	&.press-release-container {
+    background-color: #f2f2f2;
+    padding: 30px 0;
+		.smph-inner-subcontainer {
+			display: flex;
+		}
+		.section-body {
+			width: 100%;
+		}
+    .smph-btn {
+    	margin: 0 !important;
+	    white-space: nowrap;
+    }
+    .more-wrapper {
+    	margin-top: 16px;
+    }
+		.top-wrapper {
+			display: flex;
+	    width: 100%;
+	    flex-direction: column;
+      // @include breakpoint(mobile) {
+      // 	flex-direction: column;
+  	   //  align-items: baseline
+      // }
+	    & > .title {
+	    	font-size: 22px;
+		    text-transform: unset;
+		    margin: 0;
+		    // text-align: center;
+		    color: #2070C1;
+		    font-family: $avenirNext_Bold;
+		    white-space: nowrap;
+	    }
+	    .pr-wrapper {
+	    	// padding-left: 120px;
+  	    width: 100%;
+        margin: 20px 0 10px;
+  	    .pr-container {
+  	    	display: flex;
+  	    	justify-content: center;
+  	    	flex-direction: column;
+  	    	text-decoration: none;
+    	    color: #000;
+  	    	.title {
+  	    		font-size: 18px;
+  	    		font-family: $avenirNext_Demi;
+  	    		margin: 0;
+  	    	}
+  	    	.time {
+  	    		font-size: 16px;
+  	    		font-family: $avenirNext_Regular;
+  	    		margin: 0;
+  	    	}
+  	    }
+	    }
+	    .slick-arrow {
+	    	top: 0;
+	    	bottom: 0;
+	    	margin: auto 0;
+	    	&.slick-next {
+	    		left: 70px;
+		      @include breakpoint(mobile) {
+						left: 24px;
+		      }
+	    	}
+	    	&.slick-prev {
+	    		left: 20px;
+		      @include breakpoint(mobile) {
+						left: 0;
+		      }
+	    	}
+	    }
+		}
+	}
+	&.latest-company-reports-container {
+		background-color: #dde9f5;
+		.latest-company-reports-wrapper {
+			.title {
+				color: $blue;
+				font-family: $avenirNext_Bold;
+		    font-size: 20px;
+		    text-transform: unset;
+				margin-bottom: 30px;
+			}
+		}
+		.latest-company-wrapper {
+			display: flex;
+			align-items: center;
+			@include breakpoint(mobile) {
+				margin: 10px 0;
+			}
+		}
+		.reports-img {
+			max-width: 300px;
+	    height: 25vw;
+	    object-fit: cover;
+	    margin-right: 20px;
+		}
+		.info-wrapper {
+			display: flex;
+			margin-bottom: 8px;
+			flex-direction: column;
+			.title {
+				font-size: 18px;
+				font-family: $avenirNext_Bold;
+				margin: 0;
+				color: $blue;
+			}
+			.fa {
+				color: $blue;
+			}
+			a {
+				font-size: 16px;
+				font-familyY: $avenirNext_Regular;
+				text-decoration: none;
+				color: #000;
+				margin-top: 20px;
+				.fa {
+					font-size: 20px;
+			    margin-left: 3px;
+			    margin-right: 9px;
+				}
+				img {
+					margin-right: 6px;
+				width: 20px;
+				}
+			}
+		}
+	}
+
+	&.quicklinks-reports {
+		align-items: center;
+    display: flex;
+    @include breakpoint(mobile) {
+    	height: 100vw !important;
+    }
+    .parallax-content {
+    	width: 100%;
+    }
+    .row {
+    	margin: 0 -5px;
+    	.col-md-4 {
+    		padding: 0 5px;
+				@include breakpoint(mobile) {
+					margin: 5px 0;
+				}
+    	}
+    }
+		.quicklinks-wrapper {
+			background-color: #FFF;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none;
+			padding: 15px;
+			.title {
+				font-size: 22px;
+				font-family: $avenirNext_Bold;
+				color: $dark_blue;
+				margin: 0;
+			}
+			img {
+				width: 100px;
+				margin-right: 20px;
+				&.fr-img {
+					width: 80px;
+				}
+				&.if-img,
+				&.contact-img {
+			    width: 50px;
+				}
+			}
+		}
+	}
+
+	.slick-track {
+	  display: flex !important;
+	}
+	.slick-slide {
+	  height: inherit !important;
+	}
+
+}
+
+
+.faqs-wrapper {
+	.card {
+		border: 0;
+		border-bottom: 1px solid #DEDEDE;
+		border-radius: 0;
+		.card-header {
+			background-color: transparent;
+			padding: 0;
+			border: 0;
+			.btn-link {
+				color: $blue;
+				width: 100%;
+		    display: flex;
+		    justify-content: space-between;
+		    align-items: center;
+		    text-decoration: none;
+		    font-family: $avenirNext_Demi;
+		    font-size: 18px;
+		    outline: 0;
+		    box-shadow: none;
+		    padding: 10px 0;
+			}
+		}
+		.card-body {
+			padding: 0 0 15px;
+			font-family: $avenirNext_Regular;
+			font-size: 16px;
+			p {
+				&:last-of-type {
+					margin: 0;
+				}
+			}
+		}
+	}
+
+}
+
+#contactUsCollapse {
+	background-color: #f7f7f7;
+	.card-body {
+		background-color: transparent;
+		padding: 30px 0;
+		border: 0;
+		text-align: center;
+		.title {
+			font-family: $avenirNext_Bold;
+			color: $dark_blue;
+			font-size: 22px;
+		}
+		p  {
+	    margin-bottom: 0.5rem;
+	    &:last-of-type {
+	    	margin-bottom: 0;
+	    }
+		}
+		p,a {
+			font-size: 16px;
+			font-family: $avenirNext_Regular;
+			color: #545454;
+			text-decoration: none;
+			strong {
+				font-family: $avenirNext_Demi;
+			}
+		}
+	}
+}

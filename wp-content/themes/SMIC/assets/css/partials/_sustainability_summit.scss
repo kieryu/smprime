@@ -1,0 +1,267 @@
+.sdg-partnerships {
+  max-width: 90%;
+  margin: auto;
+  .first-stack {
+  	padding: 5em 0;
+    text-align: center;
+    .partnership-title {
+			max-width: 600px;
+			margin: auto;
+	    .stack-row {
+		    &:first-child {
+			    padding-bottom: 2em;
+			    border-bottom: 1px solid #000000;
+			    display: -webkit-box;
+			    display: -moz-box;
+			    display: -webkit-flex;
+			    display: -ms-flexbox;
+			    display: flex;
+			    -webkit-box-pack: center;
+			    -moz-box-pack: center;
+			    -ms-flex-pack: center;
+			    -webkit-justify-content: center;
+			    justify-content: center;
+			    -webkit-box-align: center;
+			    -moz-box-align: center;
+			    -ms-flex-align: center;
+			    -webkit-align-items: center;
+			    align-items: center;	
+			    @include breakpoint(mobile) {
+			    	flex-direction: column;
+			    }
+			    & > img {
+				    max-width: 130px;
+					}	
+					& > p {
+						color: #002957;
+				    font-family: $avenirNext_Regular;
+				    font-size: 28px;
+				    font-weight: 700;
+				    max-width: 265px;
+				    text-align: left;
+				    margin: 0;
+				    margin-left: 30px;
+				    letter-spacing: 2px;
+				    text-transform: uppercase;
+				    @include breakpoint(mobile) {
+				    	text-align: center;
+					    margin: 15px 0 0;
+				    }
+				    span {
+				    	display: block;
+				    }
+					}
+		    }
+		    &:last-child {
+		    	& > p {
+						padding-top: 1em;
+						letter-spacing: 2px;
+						text-transform: uppercase;
+						color: #000000;
+						font-family: $avenirNext_Regular;
+						font-size: 16px;
+						font-weight: 400;
+		    	}
+		    }
+    	}
+		}
+  }
+  .second-stack {
+	  padding-bottom: 7em;
+	  .stack-container {
+	  	display: -webkit-box;
+	    display: -moz-box;
+	    display: -webkit-flex;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	    -webkit-box-pack: space-between;
+	    -moz-box-pack: space-between;
+	    -ms-flex-pack: space-between;
+	    -webkit-justify-content: space-between;
+	    justify-content: space-between;
+	    .stack-item {
+		    -webkit-flex-basis: 24.8%;
+		    flex-basis: 24.8%;
+		    margin-bottom: 0.2%;
+		    position: relative;
+		    @include breakpoint(mobile) {
+			    -webkit-flex-basis: 100%;
+			    flex-basis: 100%;
+			    margin-bottom: 0;
+		    }
+				&:hover {
+					p {
+						opacity: 1;
+						z-index: 1;
+					}
+				}
+		    img {
+			    width: 100%;
+				}
+				p {
+					z-index: -1;
+			    top: 0;
+			    left: 0;
+			    margin: 0;
+			    opacity: 0;
+			    height: 100%;
+			    padding: 0 2em;
+			    position: absolute;
+			    background: #19a79c;
+			    text-align: center;
+			    -webkit-transition: all 0.5s ease;
+			    transition: all 0.5s ease;
+			    display: -webkit-box;
+			    display: -moz-box;
+			    display: -webkit-flex;
+			    display: -ms-flexbox;
+			    display: flex;
+			    -webkit-box-pack: center;
+			    -moz-box-pack: center;
+			    -ms-flex-pack: center;
+			    -webkit-justify-content: center;
+			    justify-content: center;
+			    -webkit-box-align: center;
+			    -moz-box-align: center;
+			    -ms-flex-align: center;
+			    -webkit-align-items: center;
+			    align-items: center;
+			    color: #ffffff;
+			    font-family: $avenirNext_Regular;
+			    font-size: 0.95vw;
+			    font-weight: 400;
+			    @include breakpoint(mobile) {
+			    	font-size: 14px;
+			    }
+				} 
+				&.message {
+					display: -webkit-box;
+					display: -moz-box;
+					display: -webkit-flex;
+					display: -ms-flexbox;
+					display: flex;
+					-webkit-flex-direction: column;
+					-ms-flex-direction: column;
+					flex-direction: column;
+					-webkit-box-pack: center;
+					-moz-box-pack: center;
+					-ms-flex-pack: center;
+					-webkit-justify-content: center;
+					justify-content: center;
+					background: #19a79c;
+					padding: 0 2em;
+			    @include breakpoint(mobile) {
+			    	padding: 3em 2em;
+			    }
+					span {
+						color: #ffffff;
+				    font-family: $avenirNext_Regular;
+				    font-size: 0.9vw;
+				    font-weight: 400;
+				    @include breakpoint(mobile) {
+				    	font-size: 14px;
+				    }
+				    &.name {
+				    	font-size: 0.75vw;
+					    font-weight: 700 !important;
+					    text-align: right;
+					    @include breakpoint(mobile) {
+					    	font-size: 12px;
+					    }
+				    }
+				    &.position {
+		    	    font-size: 0.75vw;
+		    	    text-align: right;
+					    @include breakpoint(mobile) {
+					    	font-size: 12px;
+					    }
+				    }
+				    &.company {
+				    	font-size: 0.65vw;
+					    font-weight: 300;
+					    text-align: right;
+					    @include breakpoint(mobile) {
+					    	font-size: 12px;
+					    }
+				    }
+					}
+				}
+				&.infographic-img {
+					background: #d1f2f0;
+			    display: -webkit-box;
+			    display: -moz-box;
+			    display: -webkit-flex;
+			    display: -ms-flexbox;
+			    display: flex;
+			    -webkit-box-pack: center;
+			    -moz-box-pack: center;
+			    -ms-flex-pack: center;
+			    -webkit-justify-content: center;
+			    justify-content: center;
+			    -webkit-box-align: center;
+			    -moz-box-align: center;
+			    -ms-flex-align: center;
+			    -webkit-align-items: center;
+			    align-items: center;
+			    img {
+			    	max-width: 70%;
+			    	@include breakpoint(mobile) {
+			    		max-width: 90%;
+			    		margin: 15px 0;
+			    	}
+			    }
+				}
+				&.two-col {
+					background: #d1f2f0;
+			    -webkit-flex-basis: 49.9%;
+			    flex-basis: 49.9%;
+			    display: -webkit-box;
+			    display: -moz-box;
+			    display: -webkit-flex;
+			    display: -ms-flexbox;
+			    display: flex;
+			    -webkit-box-pack: center;
+			    -moz-box-pack: center;
+			    -ms-flex-pack: center;
+			    -webkit-justify-content: center;
+			    justify-content: center;
+			    -webkit-box-align: center;
+			    -moz-box-align: center;
+			    -ms-flex-align: center;
+			    -webkit-align-items: center;
+			    align-items: center;
+			    @include breakpoint(mobile) {
+				    -webkit-flex-basis: 100%;
+				    flex-basis: 100%;
+			    }
+			    &.infographic-img {
+				    img {
+				    	max-width: 80%;
+				    	@include breakpoint(mobile) {
+				    		max-width: 90%;
+				    		margin: 15px 0;
+				    	}
+				    }
+			    }
+				}
+				&.three-col {
+					-webkit-flex-basis: 74.9%;
+			    flex-basis: 74.9%;
+			    @include breakpoint(mobile) {
+				    -webkit-flex-basis: 100%;
+				    flex-basis: 100%;
+			    }
+			    img {
+			    	@include breakpoint(mobile) {
+	    		    height: 40vw;
+					    object-fit: cover;
+			    	}
+			    }
+				}
+			}
+	  }
+	}
+}

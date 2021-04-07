@@ -1,0 +1,513 @@
+.page-id-2732 {
+	.cta-banner {
+		&.cta-banner-link-out {
+			&.cta-banner-key-0 {
+				.cta-banner-image {
+					object-position: 0;
+				}
+			}
+			&.cta-banner-key-1 {
+				.smph-inner-subcontainer {
+					.cta-banner-content {
+						margin-left: 18%;
+						@include breakpoint(mobile) {
+							margin-left: 0;
+						}
+					}
+				}
+			}
+			&.cta-banner-key-2 {
+				.smph-inner-subcontainer {
+					.cta-banner-content {
+						margin-left: 50%;
+						margin-top: 12rem;
+						@include breakpoint(tabletLandscape) {
+							margin-top: 6rem;
+						}
+						@include breakpoint(mobile) {
+							margin-left: 0;
+						}
+					}
+				}
+			}
+			.smph-inner-subcontainer {
+				.cta-banner-content {
+					margin-top: 10rem;
+					@include breakpoint(tabletLandscape) {
+						margin-top: 4rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+.store-network-container {
+	background-color: #f6f4f0;
+	.section-title {
+		flex-direction: column;
+    align-items: end !important;
+    .title {
+	    color: $dark_blue;
+    }
+    p {
+	    font-family: $avenirNext_Regular;
+	    font-size: 14px;
+	    margin: 0;
+    }
+	}
+	.row {
+    justify-content: center;
+	}
+	.store-network-wrapper {
+		text-align: center;
+		margin: 15px 0;
+		@include breakpoint(mobile) {
+			max-width: 50%;
+		}
+		p {
+			margin: 0;
+		}
+		.count {
+			font-family: $avenirNext_Bold;
+			color: $dark_blue;
+			font-size: 39px;
+			@include breakpoint(tabletPortrait) {
+				font-size: 26px;
+			}
+		}
+		.name {
+			font-family: $avenirNext_Regular;
+			font-size: 18px;
+			@include breakpoint(tabletPortrait) {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.sm-store-markets-container  {
+	padding-top: 0;
+	.img-wrapper {
+		img {
+			width: 100%;
+			height: 30vw;
+			object-fit: cover;
+		}
+	}
+	.smph-inner-subcontainer {
+		margin-top: 60px;
+	}
+	.title {
+		font-family: $avenirNext_Bold;
+		font-size: 22px;
+		color: $dark_blue;
+		@include breakpoint(tabletPortrait) {
+			font-size: 18px;
+		}
+		@include breakpoint(mobile) {
+			font-size: 16px;
+		}
+	}
+	p {
+		font-size: 16px;
+		font-family: $avenirNext_Regular;
+		@include breakpoint(tabletPortrait) {
+			font-size: 14px;
+		}
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.specialty-stores-container {
+	background-color: #f6f4f0;
+	.smph-inner-subcontainer  {
+		display: flex;
+		@include breakpoint(mobile) {
+			flex-direction: column;
+		}
+	}
+	.left-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@include breakpoint(mobile) {
+			margin-bottom: 15px;
+		}
+		h2 {
+			font-family: $avenirNext_Bold;
+			font-size: 22px;
+			color: $dark_blue;
+			margin-bottom: 15px;
+			@include breakpoint(tabletPortrait) {
+				font-size: 18px;
+			}
+			@include breakpoint(mobile) {
+				font-size: 16px;
+			}
+		}
+		p {
+			font-size: 16px;
+			font-family: $avenirNext_Regular;
+			@include breakpoint(tabletPortrait) {
+				font-size: 14px;
+			}
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.right-content {
+		display: flex;
+    flex-wrap: wrap;
+		img {
+			width: 60%;
+			object-fit: cover;
+			padding: 2px;
+	    height: 15vw;
+			@include breakpoint(mobile) {
+				height: 30vw;
+			}
+			&:nth-of-type(-3n+4) {
+				width: 40%;
+			}
+		}
+	}
+}
+
+.our-investsments-cta-banner  {
+	position: relative;
+	padding: 0;
+	.img-wrapper {
+		img {
+			width: 100%;
+			height: 30vw;
+			object-fit: cover;
+			@include breakpoint(mobileLg) {
+				height: 100vw;
+			}
+		}
+	}
+	.smph-inner-subcontainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+	}
+	.the-content {
+		background-color: #ffffffBF;
+    padding: 30px;
+		h2 {
+			font-family: $avenirNext_Bold;
+			font-size: 22px;
+			color: #a1926a;
+			margin-bottom: 15px;
+			@include breakpoint(tabletPortrait) {
+				font-size: 18px;
+			}
+			@include breakpoint(mobile) {
+				font-size: 16px;
+			}
+		}
+		p {
+			font-size: 16px;
+			font-family: $avenirNext_Regular;
+			@include breakpoint(tabletPortrait) {
+				font-size: 14px;
+			}
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.page-id-3744 { 
+  .cta-banner-link-out-with-numbers {
+  	&.cta-banner-key-0 {
+  		.cta-banner-image {
+  			@include breakpoint(mobile) {
+			    object-position: right;
+  			}
+  		}
+  		.cta-banner-content {
+			  margin-bottom: 5rem;
+			  @include breakpoint(tabletLandscape) {
+			  	margin-bottom: 0;
+			  }
+			  .numbers-content {
+			  	@include breakpoint(mobile) {
+	  		    margin-left: 0;
+			  	}
+			  }
+  		}
+  	}
+  	&.cta-banner-key-1 {
+  		.cta-banner-content {
+	      flex-direction: row-reverse;
+	      margin-left: auto;
+		    margin-right: 17%;
+		    margin-bottom: 8rem;;
+			  @include breakpoint(tabletLandscape) {
+			  	margin-bottom: 0;
+			  }
+	      .numbers-content {
+	      	margin-left: 0;
+	      	@include breakpoint(mobile) {
+	      		margin-right: 30px;
+	      	}
+	  		}
+      }
+  	}
+  	&.cta-banner-key-2 {
+  		.cta-banner-content {
+	      flex-direction: row-reverse;
+				margin-left: auto;
+				margin-top: 6rem;
+				@include breakpoint(mobile) {
+					margin-top: 3rem;
+				}
+	      .numbers-content {
+	      	margin-left: 0;
+    	    margin-right: 30px;
+		  		.numbers-wrapper {
+						width: 100%;
+		  		}
+	  		}
+      }
+  	}
+  	&.cta-banner-key-3 {
+  		.cta-banner-content {
+  	    margin-left: 75%;
+		    margin-bottom: 10%;
+		    @include breakpoint(tabletLandscape) {
+		    	margin-left: 62%;
+		    }
+		    @include breakpoint(tabletPortrait) {
+		    	margin-bottom: 0;
+		    }
+		    @include breakpoint(mobile) {
+		    	margin-left: 0;
+		    }
+  		}
+  	}
+  }
+}
+
+.page-id-3788 { //3788
+  .cta-banner-link-out-with-numbers {
+  	&.cta-banner-key-0 {
+  		.cta-banner-content {
+		    margin-top: 10rem;
+		    @include breakpoint(tabletLandscape) {
+		    	margin-top: 2rem;
+		    }
+  		}
+  		.numbers-content {
+		    max-width: 700px;
+		    width: 100%;
+		    justify-content: flex-end;
+		    @include breakpoint(tabletLandscape) {
+			    max-width: 600px;
+		    }
+		    @include breakpoint(tabletPortrait) {
+    	    max-width: 400px;
+		    }
+	  		.numbers-wrapper {
+	  			width: 33.3%;
+	  			@include breakpoint(mobile) {
+	  				width: 50%;
+	  			}
+	  		}
+  		}
+  	}
+  	&.cta-banner-key-1 {
+  		.cta-banner-content {
+		    margin-top: 10rem;
+		    @include breakpoint(tabletLandscape) {
+		    	margin-top: 2rem;
+		    }
+  		}
+  		.numbers-content {
+				width: 100%;
+				align-items: center;
+				max-width: 200px;
+				margin-left: 0;
+				.numbers-wrapper {
+					width: 100%;
+					margin: 20px 0;
+				}
+  		}
+  	}
+	}
+}
+
+.equity-investments-percentage-wrapper {
+	position: relative;
+	img {
+		width: 100%;
+		height: auto;
+		@include breakpoint(mobile) {
+			height: 120vw;
+			object-fit: cover;
+		}
+	}
+	.smph-inner-subcontainer {
+		position: absolute;
+		top: 0;
+		left: 0;
+    right: 0;
+		width: 100%;
+		height: 100%;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+		@include breakpoint(tabletPortrait) {
+			padding: 20px 0;
+		}
+    .section-title {
+			.title {
+				color: #FFF;
+				font-size: 22px;
+				font-family: $avenirNext_Bold;
+				text-transform: unset;
+				text-align: left;
+				margin: 0;
+				@include breakpoint(tabletPortrait) {
+					font-size: 20px;
+				}
+				@include breakpoint(mobile) {
+					font-size: 18px;
+				}
+			}
+    	.subtitle {
+    		font-size: 16px;
+    		font-family: $avenirNext_Regular;
+    		color: #fff;
+				@include breakpoint(tabletPortrait) {
+					font-size: 14px;
+				}
+    	}
+    }
+		.counter-wrapper-container {
+			display: flex;
+			flex-wrap: wrap;
+			.cw {
+				flex: 1;
+		    flex-basis: 20%;
+		    @include breakpoint(mobile) {
+		    	flex-basis: 50%;
+			    text-align: center;
+		    }
+		    .count {
+					font-size: 39px;
+					color: #FFF;
+					font-family: $avenirNext_Demi;
+					margin: 5px 0 0;
+					@include breakpoint(tabletPortrait) {
+						font-size: 26px;
+					}
+		    }
+		    .description {
+					font-family: $avenirNext_Regular;
+					font-size: 16px;
+					color: #FFF;
+					margin: -5px 0 0;
+					@include breakpoint(tabletPortrait) {
+						font-size: 14px;
+					}
+		    }
+			}
+		}
+	}
+}
+
+.investments-company-container {
+	.smph-center-container {
+		max-width: 800px;
+		@include breakpoint(tabletPortrait) {
+			max-width: 80%;
+		}
+	}
+	.card {
+		border: 0;
+		margin-bottom: 40px;
+		background-color: transparent;
+	}
+	.card-header {
+		padding: 0;
+		background-color: transparent;
+		img {
+			width: 100%;
+			height: auto;
+		}
+		.btn {
+			width: 100%;
+			background-color: transparent;
+			border-bottom: 1px solid $dark_blue;
+			padding-bottom: 15px;
+			border-radius: 0;
+			padding: 0;
+			font-family: $avenirNext_Bold;
+			font-size: 18px;
+			@include breakpoint(tabletPortrait) {
+				font-size: 16px;
+			}
+			.btn-wrapper {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 15px 0;
+				color: $dark_blue;
+			}
+		}
+	}
+	.card-body {
+		position: relative;
+		p {
+			font-size: 16px;
+			font-family: $avenirNext_Regular;
+			@include breakpoint(tabletPortrait) {
+				font-size: 14px;
+			}
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		.back-to-header {
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  background-color: $blue;
+		  width: 40px;
+		  height: 40px;
+		  text-align: center;
+		  border-radius: 4px;
+		  position: relative;
+	    margin-top: 15px;
+	    margin-left: auto;
+	    border-radius: 50%;
+		  z-index: 1000;
+		  .fa {
+		  	color: #FFF;
+		  	font-size: 20px;
+		  }
+			&:hover,&:active {
+			  cursor: pointer;
+			  background-color: $dark_blue;
+			}
+		}
+
+	}
+}

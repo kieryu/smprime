@@ -1,0 +1,111 @@
+/*
+	Theme Name: SM Prime
+	Author: Kestrel
+	Version: 1.0.1
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,900");
+@import 'partials/fonts';
+@import 'partials/keyframes';
+@import 'partials/variables';
+@import 'partials/breakpoints';
+@import 'partials/template';
+@import 'partials/frontpage';
+@import 'partials/header';
+@import 'partials/footer';
+@import 'partials/pages.scss';
+@import 'partials/inside_pages.scss';
+@import 'partials/reports.scss';
+@import 'partials/board_of_directors.scss';
+@import 'partials/governance.scss';
+@import 'partials/green_movement.scss';
+@import 'partials/kasama_ng_sm.scss';
+@import 'partials/covid_response.scss';
+@import 'partials/taxonomy.scss';
+@import 'partials/single.scss';
+@import 'partials/sustainability_summit.scss';
+@import 'partials/partnership_sustainable_development.scss';
+@import 'partials/media.scss';
+@import 'partials/green_responsibility.scss';
+@import 'partials/our_people.scss';
+@import 'partials/sustainable_growth.scss';
+@import 'partials/value_creation_story.scss';
+@import 'partials/investors.scss';
+@import 'partials/sustainability_leadership.scss';
+@import 'partials/economic_impact.scss';
+@import 'partials/awards_and_citations.scss';
+@import 'partials/pie_chart.scss';
+@import 'partials/our_history.scss';
+@import 'partials/investments.scss';
+@import 'partials/communities_we_serve.scss';
+@import 'partials/responsible_investments.scss';
+@import 'partials/contact_us.scss';
+@import 'partials/search.scss';
+
+
+// CHANGE COLOR OF LINKS THAT ARE NOT YET ACTIVE
+// .menu-item-type-custom > a {
+//   color: grey !important;
+// }
+
+// #menu-item-63 a,
+// #menu-item-64 a,
+// #menu-item-65 a,
+// #menu-item-66 a,
+// #menu-item-67 a,
+// #menu-item-68 a, {
+// 	color: #2070C1 !important;
+// }
+
+.hide {
+  display: none !important;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid $dark_blue;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+  z-index: 3;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.img-magnifier-container {
+  position: relative;
+    
+  &:hover {
+    .img-magnifier-glass {
+      opacity: 1;
+    }
+  }
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 2px solid #a9a9a9;
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+}

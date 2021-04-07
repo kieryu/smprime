@@ -1,0 +1,259 @@
+.taxonomy-wrapper {
+	padding-top: 30px;
+
+	.single-article-container {
+		display: flex;
+		@include breakpoint(mobile) {
+			flex-direction: column;
+		}
+		p {
+			margin-bottom: 1.5rem;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.article-header {
+		margin-bottom: 30px;
+		@include breakpoint(tabletPortrait) {
+			margin-bottom: 20px;
+		}
+		.taxonomy-type {
+			color: $blue;
+			font-size: 16	px;
+			font-family: $avenirNext_Demi;
+		}
+		.article-title {
+			font-size: 22px;
+			font-family: $avenirNext_Bold;
+			color: $blue;
+			@include breakpoint(mobile) {
+				font-size: 20px;
+			}
+		}
+		.article-datetime-wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.sm-sharer {
+				display: flex;
+			}
+			.sm-sprite {
+				font-size: 0;
+				width: 30px;
+				height: 30px;
+				background-color: $blue;
+				display: inline-block;
+				margin-left: 12px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				&::before {
+					content: '';
+			    display: inline-block;
+			    background: url(assets/images/socmed-articles.png) no-repeat;
+			    width: 30px;
+			    height: 30px;
+			    background-position: 0 0;
+			    background-size: 55px;
+				}
+				&:first-of-type {
+					margin-left: 0;
+				}
+				&.fb {
+					&::before {
+						width: 8px;
+						height: 17px;
+				    background-position: 0 0;
+			    background-size: 70px;
+					}
+				}
+				&.twitter {
+					&::before {
+				    width: 16px;
+				    height: 13px;
+				    background-position: -7px 0;
+					}
+				}
+				&.mail {
+					&::before {
+						width: 18px;
+						height: 13px;
+						background-position: -37px 0;
+					}
+				}
+				&.linked-in {
+					&::before {
+				    width: 14px;
+				    height: 13px;
+				    background-position: -23px 0;
+					}
+				}
+			}
+		}
+		.time {
+			display: inline-block;
+			font-size: 16px;
+			color: #171717;
+			font-family: $avenirNext_Regular;
+		}
+	}
+
+	.article-body {
+		p {
+			a {
+				@include breakpoint(tabletPortrait) {
+					display: block;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+			}
+		}
+		p,li,span {
+			font-family: $avenirNext_Regular;
+			color: #171717;
+			font-size: 16px;
+		}
+		strong,b {
+			font-family: $avenirNext_Bold;
+		}
+	}
+
+	.article-wrapper-main {
+		flex-basis: 70%;
+		max-width: 70%;
+		padding-right: 20px;
+		@include breakpoint(mobile) {
+			flex-basis: 100%;
+			max-width: 100%;
+			padding: 0;
+		}
+		// .wp-block-column {
+		// 	.wp-block-image {
+		// 		max-width: 100%;
+		// 	}
+		// }
+		// .wp-block-image {
+		// 	max-width: 70%;
+		// 	margin: 0 auto 1rem;
+		// 	@include breakpoint(mobile) {
+		// 		max-width: 100%;
+		// 	}
+		// }
+		.wp-block-image  {
+			img {
+				height: auto !important;
+				max-width: 70%;
+				@include breakpoint(mobile) {
+					max-width: 100% !important;
+					width: 100%;
+				}
+			}
+			.alignleft,.alignright {
+				img {
+					max-width: 100%;
+				}
+			}
+			.aligncenter {
+				text-align: center;
+			}
+		}
+	}
+	.article-sidebar {
+		flex-basis: 30%;
+		max-width: 30%;
+		padding-left: 20px;
+		@include breakpoint(mobile) {
+			flex-basis: 100%;
+			max-width: 100%;
+			padding: 0;
+			margin-top: 50px;
+		}
+		.sidebar-title {
+			font-family: $avenirNext_Bold;
+			font-size: 22px;
+			color: $blue;
+			margin-bottom: 25px;
+			@include breakpoint(tabletPortrait) {
+				font-size: 16px;
+				margin-bottom: 15px;
+			}
+		}
+		.go-back {
+			width: 100%;
+			max-width: 150px;
+		}
+	}
+
+	.article-side-wrapper {
+		margin-bottom: 15px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid $blue;
+		display: block;
+		text-decoration: none;
+		@include breakpoint(mobile) {
+			padding-bottom: 10px;
+		}
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		// .img-wrapper {
+		// 	img {
+		// 		width: 100%;
+		// 		height: 250px;
+		// 		object-fit: cover;
+		// 		@include breakpoint(tabletLandscape) {
+		// 			height: 150px;
+		// 		}
+		// 		@include breakpoint(mobile) {
+		// 			height: auto;
+		// 		}
+		// 	}
+		// }
+		.time {
+			display: inline-block;
+			font-size: 16px;
+			color: #171717;
+			font-family: $avenirNext_Regular;
+		}
+		.title {
+			font-family: $avenirNext_Demi;
+			font-size: 18px;
+			color: $blue;
+		}
+	}
+
+}
+
+.single-story_green_movement {
+	.taxonomy-wrapper {
+		.article-header {
+			.taxonomy-type,.article-title {
+				color: $green;
+			}
+		}
+		.article-sidebar {
+			.sidebar-title {
+				color: $green;
+			}
+			.go-back {
+				background-color: $green;
+			}
+		}
+		.article-side-wrapper {
+			border-color: $green;
+			.title {
+				color: $green;
+			}
+		}
+	}
+}
+
+// .single-story_kasama_sm {
+// 	.wp-block-image {
+// 		max-width: 70%;
+// 		margin: auto;
+// 	}
+// }

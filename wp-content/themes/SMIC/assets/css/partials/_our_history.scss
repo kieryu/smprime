@@ -1,0 +1,228 @@
+.our-history-container {
+	background-color: $dark_blue;
+	p {
+		font-size: 16px;
+		font-family: $avenirNext_Regular;
+		color: #FFF;
+	}
+	.oh-nav-container {
+		display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    @include breakpoint(mobile) {
+    	flex-direction: column;
+    	margin-top: 10px;
+    }
+	}
+	.slick-arrow {
+		&::before {
+			font-size: 18px;
+		}
+    transform: rotate(90deg);
+		@include breakpoint(mobile) {
+	    transform: rotate(0);
+		}
+	}
+	.oh-nav-for {
+    width: 60px;
+    margin-right: 20px;
+    padding-top: 20px;
+    @include breakpoint(mobile) {
+    	width: 100%;
+    	margin: 0;
+    }
+		ul {
+			padding: 0;
+			margin: 0;
+		}
+		li {
+			margin: 0;
+			font-size: 18px;
+			font-family: $avenirNext_Regular;
+			outline: 0;
+			cursor: pointer;
+			color: #FFF;
+			@include breakpoint(mobile) {
+				margin: 0 5px;
+				font-size: 16px;
+			}
+			&:hover {
+				color: $blue;
+				font-family: $avenirNext_Bold;
+			}
+		}
+		.slick-arrow {
+	    &.slick-prev {
+				top: unset;
+				bottom: -25px;
+				left: 2px;
+				@include breakpoint(mobile) {
+					bottom: 0;
+					top: 0;
+					margin: auto;
+					left: -20px;
+				}
+	    }
+	    &.slick-next {
+				top: unset;
+				bottom: -25px;
+				right: 18px;
+				@include breakpoint(mobile) {
+					bottom: 0;
+					top: 0;
+					margin: auto;
+					right: -20px;
+				}
+	    }
+		}
+		.slick-current {
+			color: $blue;
+			font-family: $avenirNext_Bold;
+		}
+	}
+	.oh-nav {
+		width: 500px;
+		@include breakpoint(mobile) {
+			width: 100%;
+			margin-top: 15px;
+		}
+		.slick-list {
+			padding-left: 10px;
+			@extend .transition;
+			@include breakpoint(mobile) {
+				padding-left: 0;
+			}
+		}
+		.history-wrapper {
+			margin: 0 0 20px;
+			outline: 0;
+			@include breakpoint(mobile) {
+				margin: 0 5px;
+			}
+		}
+		.history-wrapper-container {
+			padding: 20px;
+			background-color: #FFF;
+			position: relative;
+			@include breakpoint(mobile) {
+				padding: 15px;
+			}
+			.details {
+				p {
+					color: #000;
+					@include breakpoint(tabletPortrait) {
+						font-size: 14px;
+					}
+					&:last-of-type {
+						margin-bottom: 0;
+					}
+				}
+			}
+			p {
+				font-size: 16px;
+				font-family: $avenirNext_Regular;
+				@include breakpoint(tabletPortrait) {
+					font-size: 14px;
+				}
+				&.year {
+					color: $dark_blue;
+					font-family: $avenirNext_Demi;
+					font-size: 18px;
+					margin: 10px 0;
+					@include breakpoint(tabletPortrait) {
+						font-size: 16px;
+					}
+				}
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				top: 23px;
+				left: -10px;
+				width: 0; 
+				height: 0; 
+				border-top: 10px solid transparent;
+				border-bottom: 10px solid transparent; 
+				border-right:10px solid #FFF; 
+				@include breakpoint(mobile) {
+					display: none;
+				}
+			}
+			.info-wrapper {
+		    // padding-left: 20px;
+			}
+		}
+		.img-wrapper {
+			// height: 300px;
+			// display: flex;
+			// align-items: center;
+			// overflow: hidden;
+	    // min-width: 300px;
+	    // max-width: 300px;
+	    width: 100%;
+	    max-height: 500px;
+	    overflow: hidden;
+			img {
+				width: 100%;
+				height: auto;
+		    object-fit: cover;
+			}
+		}
+		.slick-arrow {
+			top: 54.5%;
+			@include breakpoint(mobile) {
+				display: none !important;
+			}
+	    // top: 30px;
+	    @extend .transition;
+	    &.slick-prev {
+	    	left: unset;
+				right: 8%;
+	    }
+	    &.slick-next {
+				right: 4%;
+	    }
+		}
+	}
+}
+
+.featured-content-two {
+	.section-title {
+		.title {
+			text-transform: unset;
+		}
+	}
+	.featured-content-wrapper {
+		text-decoration: none;
+		outline: 0;
+		padding: 0 15px;
+		img {
+			width: 100%;
+	    height: 20vw;
+			object-fit: cover;
+			@include breakpoint(mobile) {
+				height: 50vw;
+			}
+		}
+		.info-details {
+			margin-top: 15px;
+			.type {
+				color: $blue;
+				font-size: 16px;
+				font-family: $avenirNext_Regular;
+				margin: 0;
+				@include breakpoint(tabletPortrait) {
+					font-size: 14px;
+				}
+			}
+			.title {
+				color: #000;
+				font-size: 18px;
+				font-family: $avenirNext_Demi;
+				@include breakpoint(tabletPortrait) {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}

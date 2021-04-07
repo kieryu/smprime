@@ -1,0 +1,57 @@
+.page-id-4374 {
+	.breadcrumbs {
+		display: none;
+	}
+	.form-wrapper  {
+		margin: 30px -15px;
+		label {
+			font-size: 16px;
+			font-family: $avenirNext_Regular;
+		}
+		input,select {
+			font-size: 16px;
+			font-family: $avenirNext_Regular;
+		}
+		.btn-primary {
+			background-color: $blue;
+			min-width: 150px;
+	    border-radius: 0;
+	    padding: 8px 15px;
+	    font-size: 16px;
+	    font-family: $avenirNext_Regular;
+		}
+		.form-control {
+			outline: 0;
+			box-shadow: none;
+			border-radius: 0;
+			&:hover,&:focus {
+				border: 1px solid $blue;
+			}
+		}
+		& > .terms {
+	    margin: 20px 0 30px;
+			.wpcf7-form-control-wrap.terms {
+				position: absolute;
+				left: 20px;
+			}
+			& > label {
+				background-color: #dcecfc;
+				margin: 0;
+		    padding: 20px 30px;
+        padding-left: 45px;
+		    position: relative;
+		    font-family: $avenirNext_Regular;
+		    font-size: 16px;
+			}
+			.wpcf7-list-item-label  {
+				display: none;
+			}
+			.wpcf7-list-item {
+				margin: 0;
+			}
+		}
+	}
+	.wpcf7-not-valid-tip {
+		font-size: 12px;
+	}
+}

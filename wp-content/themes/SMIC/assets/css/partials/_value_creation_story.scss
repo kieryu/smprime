@@ -1,0 +1,532 @@
+.ovcs-wrapper {
+	padding: 30px 0;
+	.title-wrapper {
+		margin-bottom: 15px;
+		.title {
+			font-family: $avenirNext_Bold;
+			color: $brown;
+			font-size: 22px;
+			margin: 0;
+		}
+	}
+	.body-wrapper {
+		.full-img {
+			width: 100%;
+			height: auto;
+		}
+		.desc-info {
+			p {
+				font-family: $avenirNext_Regular;
+				font-size: 16px;
+			}
+		}
+	}
+	.table-responsive {
+    -ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none; /* Firefox 64 */
+	}
+
+}
+
+.value-creation-story {
+	.body-wrapper {
+		position: relative;
+		@include breakpoint(mobile) {
+			display: none;
+		}
+		&.mobile {
+			display: none;
+			@include breakpoint(mobile) {
+				display: block;
+			}
+		}
+	}
+	.ovcs-animate {
+		@extend .transition;
+		opacity: 0;
+		&.ovcs-show {
+			opacity: 1;
+		}
+	}
+	.ovcs-hover {
+		cursor: pointer;
+	}
+	.ovcs-wrapper {
+		z-index: 2;
+    position: absolute;
+    width: 300px;
+    height: auto;
+    display: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background: #ffffff;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.19), 0 2px 5px rgba(0, 0, 0, 0.23);
+    p {
+    	font-family: $avenirNext_Regular;
+    	font-size: 14px;
+    	&:last-of-type {
+    		margin: 0;
+    	}
+    	span  {
+    		font-family: $avenirNext_Demi;
+    	}
+    }
+    &::before {
+    	content: "";
+	    left: 0;
+	    top: 35px;
+	    width: 20px;
+	    height: 20px;
+	    position: absolute;
+	    pointer-events: none;
+	    background: #FFFFFF;
+	    border-left: 1px solid #ffffff;
+	    border-bottom: 1px solid #ffffff;
+	    -webkit-transform: translateX(-50%) rotate(45deg);
+	    transform: translateX(-50%) rotate(45deg);
+    }
+    &.right-arrow {
+    	&::before {
+		    right: -20px;
+		    left: unset;
+    	}
+    }
+		&.active {
+			display: block;
+		}
+		&.economic-value-popout {
+			width: 150px;
+			img {
+				width: 100%;
+				max-width: 120px;
+			}
+			&.right-arrow {
+				&::before {
+					right: -10px;
+				}
+			}
+			&::before {
+				width: 10px;
+		    height: 10px;
+			}
+		}
+	}
+	#economicValuePopout1 {
+    top: 44%;
+    right: 26.5%;
+	}
+	#economicValuePopout2 {
+    top: 42%;
+    right: 2.5%;
+	}
+	#economicValuePopout3 {
+    top: 47%;
+    right: 2.5%;
+	}
+	#economicValuePopout4 {
+		top: 57%;
+		right: 4.4%;
+	}
+	#economicValuePopout5 {
+		top: 54%;
+		right: 3.5%;
+	}
+	#customerFocused {
+		top: 10%;
+    left: 49%;
+	}
+	#ourBusinessEcosystem {
+		top: 28%;
+    left: 49%;
+	}
+	#dynamicWorldOfPeople {
+		top: 46%;
+    left: 49%;
+	}
+	#responsibleBusinessPractices {
+		top: 64%;
+    left: 49%;
+	}
+	#goodCorporateGovernance {
+		top: 81%;
+    left: 49%;
+	}
+
+	#productDelivery {
+		top: 10%;
+    left: 72%;
+	}
+	#purposelyWOrk {
+		top: 28%;
+    left: 72%;
+	}
+	#socialAndFinancial {
+		top: 46%;
+    left: 72%;
+	}
+	#environmentalResponsibility {
+		top: 64%;
+    left: 72%;
+	}
+	#activeEngagement {
+		top: 81%;
+    left: 72%;
+	}
+}
+
+.our-framework {
+	.mobile.framework {
+		display: none;
+		@include breakpoint(mobile) {
+			display: block;
+		}
+	}
+	.right-arrow {
+		display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    @include breakpoint(mobile) {
+    	display: none;
+    }
+    .d-flex {
+			display: -webkit-box;
+			display: -moz-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			img {
+		    margin: 0 5px 8.8px;
+			}
+		}
+		.result {
+			img {
+				&:first-child {
+					width: 71%;
+				}
+			}
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+.our-matrix {
+	.framework {
+		position: relative;
+		svg {
+			@include breakpoint(mobile) {
+				display: none;
+			}
+		}
+	}
+	.framework-hover {
+		cursor: pointer;
+	}
+	.framework-desc {
+		z-index: 2;
+    position: absolute;
+    width: 500px;
+    height: auto;
+    display: none;
+    padding: 2em 3em;
+    border-radius: 5px;
+    background: #ffffff;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.19), 0 2px 5px rgba(0, 0, 0, 0.23);
+    @include breakpoint(tabletPortrait) {
+			padding: 30px 15px;
+	    width: 250px;
+    }
+    @include breakpoint(mobile) {
+	    padding: 15px;
+    	position: relative;
+    	width: 100%;
+    	display: block;
+    	top: 0 !important;
+    	left: 0 !important;
+    	right: 0 !important;
+    	bottom: 0 !important;
+	    margin: 15px 0;
+    }
+    img {
+    	display: none;
+    	@include breakpoint(mobile) {
+    		max-width: 40px;
+    		display: block;
+    	}
+    }
+    h5 {
+			color: #044d82;
+			font-family: $avenirNext_Demi;
+			font-size: 18px;
+			@include breakpoint(tabletPortrait) {
+				font-size: 16px;
+			}
+			@include breakpoint(mobile) {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+    }
+    p {
+    	font-family: $avenirNext_Regular;
+    	font-size: 16px;
+    	@include breakpoint(tabletPortrait) {
+				font-size: 14px;
+    	}
+    	&:last-of-type {
+    		margin-bottom: 0;
+    	}
+    	span  {
+    		font-family: $avenirNext_Demi;
+    	}
+    }
+    &::before {
+    	content: "";
+	    left: 0;
+	    top: 35px;
+	    width: 20px;
+	    height: 20px;
+	    position: absolute;
+	    pointer-events: none;
+	    background: #FFFFFF;
+	    border-left: 1px solid #ffffff;
+	    border-bottom: 1px solid #ffffff;
+	    -webkit-transform: translateX(-50%) rotate(45deg);
+	    transform: translateX(-50%) rotate(45deg);
+	    @include breakpoint(mobile) {
+	    	display: none;
+	    }
+    }
+    &.right-arrow {
+    	&::before {
+		    right: -20px;
+		    left: unset;
+    	}
+    }
+		&.active {
+			display: block;
+		}
+	}
+	#economicPerformance {
+    top: 53%;
+    left: 53%;
+    @include breakpoint(desktopStandard) {
+    	top: 47%;
+    }
+	}
+	#marketPresence {
+    top: 57%;
+    left: 36%;
+    @include breakpoint(desktopStandard) {
+    	top: 52%;
+    }
+	}
+	#inclusiveSupplyChain {
+		top: 63%;
+		left: 50%;
+    @include breakpoint(desktopStandard) {
+    	top: 57%;
+    }
+	}
+	#employeeRightsAndWelfare {
+    top: 31%;
+    right: 38%;
+    @include breakpoint(desktopStandard) {
+			top: 25%;
+			right: 39%;
+    }
+	}
+	#employeeTraining {
+    top: 51%;
+    left: 40%;
+    @include breakpoint(desktopStandard) {
+    	top: 45%;
+    }
+	}
+	#occupationalHealth {
+		top: 31%;
+		left: 54%;
+		@include breakpoint(desktopStandard) {
+			top: 25%;
+			left: 55%;
+		}
+	}
+	#diversityAndEqual {
+    top: 43%;
+    right: 42%;
+		@include breakpoint(desktopStandard) {
+			top: 37%;
+		}
+	}
+	#sustainableOperations {
+    top: 36%;
+    right: 29%;	
+    @include breakpoint(desktopStandard) {
+    	top: 30%;
+	    right: 30%;
+    }
+  }
+	#leadershipPolicy {
+    top: 17%;
+    right: 37%;
+		@include breakpoint(desktopStandard) {
+	    top: 11%;
+	    right: 38%;
+		}
+	}
+	#communityInvolvement {
+    top: 54%;
+    left: 60%;
+    @include breakpoint(desktopStandard) {
+	    top: 48%;
+	    left: 61%;
+    }
+	}
+	#customerRights {
+    top: 30%;
+    left: 62%;
+    @include breakpoint(desktopStandard) {
+    	top: 24%;
+    }
+	}
+}
+
+.commitments-to-stakeholders {
+	.cts-wrapper {
+		margin-top: 50px;
+		.header-wrapper {
+			display: flex;
+	    align-items: start;
+	    margin-bottom: 15px;
+			img {
+				max-width: 100%;
+			}
+			.title-wrapper {
+				margin-left: 15px;
+				.title {
+					font-family: $avenirNext_Demi;
+					font-size: 20px;
+					color: $brown;
+					margin: 0;
+				}
+				p  {
+					font-family: $avenirNext_Regular;
+					font-size: 14px;
+					color: #000;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+.ovcs-inner-table  {
+	@include breakpoint(mobile) {
+		display: block !important;
+	}
+	&.hide {
+		@include breakpoint(mobile) {
+			display: block !important;
+		}
+	}
+	.title-wrapper {
+		display: none;
+		@include breakpoint(mobile) {
+			display: block !important;
+			text-align: center;
+			margin-top: 50px;
+		}
+		.title {
+			@include breakpoint(mobile) {
+				font-size: 16px;
+			}
+		}
+		img {
+			@include breakpoint(mobile) {
+				max-width: 80px;
+			}
+		}
+	}
+}
+
+.ovcs-table  {
+	width: 100%;
+	th {
+		white-space: nowrap;
+	}
+	th,td {
+		font-family: $avenirNext_Regular;
+		font-size: 16px;
+		padding: 5px 10px;
+		@include breakpoint(tabletPortrait) {
+			font-size: 14px;
+		}
+	}
+	td {
+		&:nth-child(even) {background: #ecebe3}
+		&:nth-child(odd) {background: #f8f8f4}
+		border-bottom: 3px solid #FFF;
+		line-height: 18px;
+	}
+
+	thead {
+		th {
+			color: #FFF;
+			background-color: #a29069;
+			&:first-of-type {
+				width: 40%;
+			}
+		}
+	}
+}
+
+.ocs-container {
+	display: flex;
+	margin: 1% -0.5% 0;
+	.ocs-inner-wrapper {
+		width: 25%;
+		background-color: #b5a988;
+    margin: 0 0.5%;
+	  text-align: center;
+	  padding: 15px;
+	  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @include breakpoint(mobile) {
+    	display: none;
+    }
+    &.active {
+    	background-color: #A29069;
+    }
+		.ocs-icons {
+			width: 100%;
+			max-width: 80px;
+			height: auto;
+			filter: brightness(0) invert(1);
+			@include breakpoint(tabletPortrait) {
+				max-width: 60px;
+			}
+		}
+		.title {
+			margin-top: 10px;
+			font-size: 18px;
+			color: #FFF;
+			font-family: $avenirNext_Demi;
+			@include breakpoint(tabletPortrait) {
+				font-size: 14px;
+			}
+		}
+	}
+}

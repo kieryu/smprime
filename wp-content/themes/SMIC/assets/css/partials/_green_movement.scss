@@ -1,0 +1,213 @@
+.our-pillars {
+	background-color: #f5f5f5;
+	.section-title {
+		border-bottom: 1px solid $green;
+		padding-bottom: 15px;
+		margin-bottom: 30px !important;
+		.title {
+			color: $green;
+		}
+	}
+	.our-pillar-wrapper {
+		text-align: center;
+		@include breakpoint(mobile) {
+			margin-top: 30px;
+			text-align: center;
+		}
+		&:first-of-type {
+			@include breakpoint(mobile) {
+				margin-top: 0;
+			}
+		}
+		img {
+			width: 80%;
+			height: auto;
+			object-fit: cover;
+			@include breakpoint(mobile) {
+				height: auto;
+			}
+		}
+		.title {
+			color: $green;
+			font-size: 18px;
+			font-family: $avenirNext_Demi;
+			margin: 20px 0;
+			@include breakpoint(mobile) {
+				font-size: 16px;
+			}
+		}
+		p {
+			font-size: 16px;
+			font-family: $avenirNext_Regular;
+			margin: 0;
+			@include breakpoint(mobile) {
+				font-size: 14px;
+			}
+		}
+		.smph-btn {
+			margin-top: 10px;
+		}
+		.desc {
+			text-align: left;
+			@include breakpoint(mobile) {
+				text-align: center;
+			}
+		}
+	}
+}
+.vision-mission-wrapper {
+	background-color: $light_green;
+	padding: 30px 0;
+	@include breakpoint(mobile) {
+		text-align: center;
+	}
+	.mission-container,
+	.vision-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include breakpoint(mobile) {
+			flex-direction: column;
+		}
+		img {
+			width: 19%;
+		}
+	}
+	.mission-container {
+		img {
+			width: 19%;
+			margin-right: 20px;
+			@include breakpoint(mobile) {
+				margin: 0 0 15px;
+				width: 80%;
+			}
+		}
+		@include breakpoint(mobile) {
+			margin-top: 30px;
+		}	
+		.right-content {
+			justify-content: center;
+	    display: flex;
+		}
+	}
+	.vision-container {
+		@include breakpoint(mobile) {
+			flex-direction: column-reverse;;
+		}
+		img {
+			width: 19%;
+			margin-left: 20px;
+			@include breakpoint(mobile) {
+				margin: 0 0 15px;
+				width: 80%;
+			}
+		}
+	}
+	.info-details {
+		.title {
+			font-family: $avenirNext_Bold;
+			font-size: 22px;
+			color: $green;
+			@include breakpoint(tabletPortrait) {
+				font-size: 18px;
+			}
+			@include breakpoint(mobile) {
+				font-size: 16px;
+			}
+		}
+		p {
+			font-family: $avenirNext_Regular;
+			font-size: 16px;
+			@include breakpoint(mobile) {
+				font-size: 14px;
+			}
+			&:last-of-type {
+				margin: 0;
+			}
+		}
+	}
+}
+
+
+.page-id-460 {
+	.mainbody-content {
+		padding-bottom: 0;
+	}
+	.featured-stories {
+		.section-title {
+			.title,.see-all {
+				color: $green;
+			}
+		}
+		.featured-stories-wrapper {
+			outline: 0;
+			.stories-type {
+				color: $green;
+			}
+			.desc {
+				border-color: $green;
+			}
+		}
+	}
+	.slick-arrow {
+		&.slick-prev {
+			&::before {
+				color: $green;
+			}
+		}
+		&.slick-next {
+			&::before {
+				color: $green;
+			}
+		}
+	}
+}
+
+.more-on-sm-community {
+	.more-on-sm-community-wrapper {
+		text-decoration: none;
+		margin-bottom: 15px;
+		outline: 0 !important;
+		box-shadow: none;
+	}
+	.img-wrapper {
+		position: relative;
+		img {
+			width: 100%;
+			height: 20vw;
+			object-fit: cover;
+			@include breakpoint(mobile) {
+		    height: 65vw;
+			}
+		}
+		.banner-title {
+			color: #343a40;
+			font-size: 22px;
+			font-family: $avenirNext_Bold;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			margin: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			line-height: 24px;
+			@include breakpoint(tabletLandscape) {
+				font-size: 18px;
+				line-height: 22px;
+			}
+			@include breakpoint(tabletPortrait) {
+				font-size: 14px;
+				line-height: 16px;
+			}
+		}
+	}
+	.title {
+		margin: 10px 0 0;
+		font-size: 18px;
+		font-family: $avenirNext_Regular;
+		color: $blue;
+	}
+}

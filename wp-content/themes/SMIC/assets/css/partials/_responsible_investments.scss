@@ -1,0 +1,1167 @@
+.responsible-investments-tabs-container {
+	background-color: #dfeaf1;
+	padding: 0;
+	margin-bottom: 0;
+	.communities-list {
+		display: flex;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	  justify-content: space-between;
+	  @include breakpoint(tabletPortrait) {
+	    overflow-y: scroll;
+	  }
+		li {
+			a {
+				text-align: center;
+				display: inline-flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-between;
+				color: #3F3F3F;
+				font-size: 18px;
+				text-decoration: none;
+				font-family: $avenirNext_Regular;
+		    padding: 10px 0;
+		    white-space: nowrap;
+		    @include breakpoint(tabletPortrait) {
+					margin: 0 15px;
+					font-size: 16px;
+		    }
+		    &::after {
+					content: attr(data-text);
+					content: attr(data-text) / "";
+					height: 0;
+					visibility: hidden;
+					overflow: hidden;
+					user-select: none;
+					pointer-events: none;
+					font-family: $avenirNext_Bold;
+		    }
+				&.active,&:hover {
+					color: $dark_blue;
+					font-family: $avenirNext_Bold;
+				}
+			}
+		}
+	}
+}
+
+.responsible-investments-tabs-content {
+	
+	.slick-arrow.slick-next {
+		@include breakpoint(mobile) {
+	    right: -20px;
+		}
+	}
+	.slick-arrow.slick-prev {
+		@include breakpoint(mobile) {
+	    left: -20px;
+		}
+	}
+
+	.text-brown {
+		color: #A2926A;
+	}
+
+	.text-chinabank {
+		color: #e31f26;
+	}
+
+	.text-blue {
+		color: $blue;
+	}
+	.text-dark-blue {
+		color: $dark_blue;
+	}
+	.text-twogo {
+		color: #EC0C8C;
+	}
+	.text-belle {
+		color: #C39909;
+	}
+
+	.ri-tabs-content {
+		height: 0;
+    overflow: hidden;
+		&.active {
+			height: auto;
+		}
+		.bg-brown {
+			background-color: #F7F5EC;
+		}
+		.bg-dark-blue {
+			background-color: $dark_blue;
+		}
+		.bg-blue {
+			background-color: #DFEAF1;
+		}
+		.bg-grey {
+			background-color: #EAF0E8;
+		}
+		.bg-light-blue {
+			background-color: #CBECF9;
+		}
+
+		.logo-container {
+			.main-logo {
+				width: auto;
+				height: 60px;
+				margin-bottom: 10px;
+				@include breakpoint(tabletPortrait) {
+					height: 50px;
+				}
+			}
+			p {
+				font-size: 16px;
+				font-family: $avenirNext_Regular;
+				margin: 0;
+				@include breakpoint(tabletPortrait) {
+					font-size: 14px;
+				}
+			}
+		}
+		.mainbody-container {
+			margin-top: 30px;
+			.title {
+				font-size: 22px;
+				font-family: $avenirNext_Bold;
+				@include breakpoint(tabletPortrait) {
+					font-size: 18px;
+				}
+				@include breakpoint(mobile) {
+					font-size: 16px;
+				}
+			}
+			p {
+				font-size: 16px;
+				font-family: $avenirNext_Regular;
+				@include breakpoint(tabletPortrait) {
+					font-size: 14px;
+				}
+			}
+			&.with-sust-report {
+				display: flex;
+				justify-content: space-between;
+				@include breakpoint(mobile) {
+					flex-direction: column-reverse;
+				}
+				.left-content {
+					padding-right: 30px;
+					width: 100%;
+				}
+				.right-content {
+					max-width: 200px;
+					width: 100%;
+					@include breakpoint(mobile) {
+						max-width: 150px;
+						margin-bottom: 10px;
+					}
+				}
+				.sust-report-wrapper {
+					img {
+						width: 100%;
+						height: auto;
+					}
+					.read-here {
+						font-size: 10px;
+				    padding: 10px 15px;
+				    &.twogo-btn {
+				    	background-color: #EC0C8C;
+				    	color: #FFF;
+				    }
+				    &.belle-btn {
+				    	background-color: #C39909;
+				    	color: #FFF;
+				    }
+				    &.chinabank-btn {
+							background-color: #e31f26;
+							color: #FFF;
+				    }
+					}
+				}
+			}
+			li {
+				p {
+					margin: 0;
+				}
+			}
+		}
+		.counter-main-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 50px 0 15px;
+			.counter-wrapper {
+				flex-basis: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				@include breakpoint(mobile) {
+					flex-basis: 50%;
+					margin: 15px 0;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					text-align: center;
+				}
+				&:nth-of-type(2) {
+					@include breakpoint(mobile) {
+						margin-top: 33px;
+					}
+				}
+				&:nth-of-type(4) {
+					@include breakpoint(mobile) {
+						margin-top: 40px;
+					}
+				}
+				&:nth-of-type(n+3) {
+					margin: 20px 0 0;
+				}
+				.icon {
+					img {
+						max-width: 80px;
+						height: auto;
+						@include breakpoint(tabletPortrait) {
+							max-width: 50px;
+						}
+					}
+				}
+				.info {
+					margin-left: 25px;
+					@include breakpoint(mobile) {
+						margin-left: 0;
+					}
+				}
+				.counter {
+					font-family: $avenirNext_Bold;
+					color: #A2926A;
+					font-size: 38px;
+					margin: 0;
+					@include breakpoint(tabletPortrait) {
+						font-size: 26px;
+					}
+				}
+				.description {
+					font-family: $avenirNext_Regular;
+					font-size: 18px;
+					text-align: left;
+					margin: 0;
+					@include breakpoint(tabletPortrait) {
+						font-size: 14px;
+					}
+					@include breakpoint(mobile) {
+						text-align: center;
+					}
+				}
+			}
+		}
+		.sm-bonus-wrapper  {
+			padding-top: 100px;
+			position: relative;
+			.img-wrapper {
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+			.sm-bonus-content {
+				position: absolute;
+				justify-content: space-between;
+				display: flex;
+				top: 5%;
+				left: 30%;
+				right: 15%;
+				@include breakpoint(mobile) {
+					left: 5%;
+			    right: 5%;
+				}
+				.counter {
+					font-family: $avenirNext_Bold;
+					font-size: 38px;
+					margin: 0;
+					@include breakpoint(tabletPortrait) {
+						font-size: 26px;
+					}
+					&.text-blue {
+						color: $blue;
+					}
+				}
+				.description {
+					font-family: $avenirNext_Regular;
+					font-size: 18px;
+					text-align: left;
+					margin: 0;
+					@include breakpoint(tabletPortrait) {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+	.slick-body-container {
+		padding-bottom: 40px;
+		.header-container {
+			display: flex;
+	    align-items: center;
+	    padding-top: 40px;
+	    @include breakpoint(mobile) {
+	    	flex-direction: column;
+	    	align-items: baseline;
+	    }
+			.left-content {
+				@include breakpoint(mobile) {
+					margin-bottom: 15px;
+				}
+				.title {
+					position: relative;
+					font-family: $avenirNext_Bold;
+					font-size: 28px;
+					padding-left: 50px;
+					margin: 0;
+					@include breakpoint(tabletPortrait) {
+						font-size: 22px;
+					}
+					span {
+						position: absolute;
+						left: 0;
+						top: -25px;
+						font-size: 60px;
+					}
+				}
+			}
+			p {
+				margin: 0;
+				font-size: 16px;
+				font-family: $avenirNext_Regular;
+				@include breakpoint(tabletPortrait) {
+					font-size: 14px;
+				}
+			}
+			& > div {
+				flex: 1;
+			}
+		}
+		.slick-wrapper {
+			display: flex;
+			align-items: center;
+			margin: 30px 0;
+			outline: 0;
+			width: 100%;
+			@include breakpoint(mobile) {
+				flex-direction: column;
+			}
+			& > div {
+				flex: 1;
+				&:first-of-type {
+					p,.title {
+						padding-left: 30px;
+					}
+				}
+			}
+			.img-wrapper {
+				img {
+			    width: auto;
+			    height: 300px;
+			    margin: auto;
+			    @include breakpoint(tabletPortrait) {
+			    	height: 200px;
+			    }
+			    @include breakpoint(mobile) {
+				    width: 80%;
+				    height: auto;
+				    object-fit: cover;
+				    margin-bottom: 15px;
+			    }
+				}
+			}
+			.info-wrapper {
+				.inner-logo {
+					margin-bottom: 10px;
+					img {
+						max-width: 200px;
+						height: auto;
+						@include breakpoint(tabletPortrait) {
+							max-width: 120px;
+						}
+					}
+				}
+				h4.title {
+					font-family: $avenirNext_Bold;
+					font-size: 22px;
+					color: $blue;
+					@include breakpoint(tabletPortrait) {
+						font-size: 18px;
+					}
+					@include breakpoint(mobile) {
+						font-size: 16px;
+					}
+				}
+				p {
+					font-family: $avenirNext_Regular;
+					font-size: 16px;
+					@include breakpoint(tabletPortrait) {
+						font-size: 14px;
+					}
+					&:last-of-type {
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.brand-csr-store-exp {
+		.slick-track {
+		  display: flex !important;
+		  @include breakpoint(mobile) {
+		  	display: block !important; 
+		  }
+		}
+
+		.slick-slide {
+	    height: inherit !important;
+	    display: flex;
+	    flex-direction: column;
+		  @include breakpoint(mobile) {
+		  	height: 100% !important; 
+		  }
+		}
+		.slick-list {
+			@extend .transition;
+		}
+		.slick-communities {
+			margin: auto;
+		}
+	}
+
+	.slick-wrapper-multiple-col  {
+		outline: 0;
+		.slick-header {
+			.title {
+				font-size: 20px;
+				color: $blue;
+				font-family: $avenirNext_Bold;
+				@include breakpoint(tabletPortrait) {
+					font-size: 16px;
+				}
+			}
+			p  {
+				font-size: 16px;
+				font-family: $avenirNext_Regular;
+				@include breakpoint(tabletPortrait) {
+					font-size: 14px;
+				}
+			}
+		}
+		.slick-communities {
+			display: flex;
+			@include breakpoint(mobile) {
+				flex-direction: column;
+			}
+			&.csr {
+				align-items: center;
+		    justify-content: space-evenly;
+		    .communities-wrapper {
+    	    margin: 0 30px;
+		    }
+		    img {
+					height: 80px;
+					width: auto;
+					max-width: none !important;
+		    }
+			}
+			&.store-experience {
+				img {
+					max-width: 100px !important;
+					@include breakpoint(tabletPortrait) {
+						max-width: 80px !important; 
+					}
+					@include breakpoint(mobile) {
+						max-width: 50px !important; 
+					}
+				}
+			}
+			&.brand-experience {
+				justify-content: center;
+				img {
+					@include breakpoint(mobile) {
+						width: 100%;
+					}
+				}
+			}
+			.communities-wrapper {
+				text-align: center;
+				padding: 20px;
+				img {
+					margin: auto;
+			    max-width: 80px;
+				}
+				.title {
+					font-size: 18px;
+					font-family: $avenirNext_Bold;
+					color: $blue;
+					margin: 15px 0 10px;
+					@include breakpoint(tabletPortrait) {
+						font-size: 16px;
+					}
+				}
+				p {
+					font-size: 16px;
+					font-family: $avenirNext_Regular;
+					@include breakpoint(tabletPortrait) {
+						font-size: 14px;
+					}
+				}
+				.counter {
+					font-family: $avenirNext_Bold;
+					font-size: 39px;
+					margin: 0;
+					@include breakpoint(tabletPortrait) {
+						font-size: 26px;
+					}
+					&.text-blue {
+						color: $blue;
+					}
+				}
+				.description {
+					font-family: $avenirNext_Regular;
+					font-size: 18px;
+					text-align: left;
+					margin: 0;
+					@include breakpoint(tabletPortrait) {
+						font-size: 14px;
+					}
+					@include breakpoint(mobile) {
+						text-align: center;
+					}
+				}
+			}
+			&.slick-communities-two {
+				justify-content: center;
+		    margin-top: 30px;
+		    @include breakpoint(mobile) {
+		    	align-items: center;
+		    }
+				.communities-wrapper {
+					width: 33.3%;
+					text-align: left;
+			    @include breakpoint(mobile) {
+						width: 100%;
+						text-align: center;
+			    }
+				}
+				img {
+					width: 100%;
+					max-width: none;
+				}
+			}
+		}
+	}
+
+	.our-people-main-wrapper {
+		.title {
+			font-family: $avenirNext_Bold;
+			font-size: 22px;
+			color: $blue;
+			@include breakpoint(tabletPortrait) {
+				font-size: 18px;
+			}
+			@include breakpoint(mobile) {
+				font-size: 16px;
+			}
+		}
+		p {
+			font-family: $avenirNext_Regular;
+			font-size: 16px;
+			@include breakpoint(mobile) {
+				font-size: 14px;
+			}
+		}
+		.our-people-wrapper {
+			.img-wrapper {
+				img {
+					width: 100%;
+					height: 25vw;
+					object-fit: cover;
+					@include breakpoint(mobile) {
+						height: 50vw;
+					}
+				}
+			}
+			.content-title {
+				color: $blue;
+				font-family: $avenirNext_Regular;
+				font-size: 18px;
+				margin: 15px 0 5px;
+				@include breakpoint(tabletPortrait) {
+					font-size: 16px;
+				}
+			}
+			p {
+				font-family: $avenirNext_Regular;
+				font-size: 16px;
+				@include breakpoint(tabletPortrait) {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+	.our-customers-wrapper {
+		position: relative;
+		padding: 0;
+		.bg-image {
+			width: 100%;
+			height: auto;
+		}
+		.the-content {
+			position: absolute;
+			max-width: 300px;
+			top: 62%;
+			left: 52%;
+			@include breakpoint(mobile) {
+				top: 15px;
+				left: 30px;
+				right: 30px;
+				bottom: 15px;
+				max-width: 100%;
+				margin: auto;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				background-color: #fff9;
+				padding: 15px;
+			}
+			.title {
+				font-family: $avenirNext_Bold;
+				font-size: 22px;
+				color: $blue;
+				margin-bottom: 15px;
+				@include breakpoint(tabletPortrait) {
+					font-size: 18px;
+				}
+				@include breakpoint(mobile) {
+					font-size: 16px;
+					margin-bottom: 5px;
+				}
+			}
+			p {
+				font-family: $avenirNext_Regular;
+				font-size: 16px;
+				@include breakpoint(tabletPortrait) {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+	.sm-prime-pillars {
+		position: relative;
+		.pillars-main-wrapper  {
+			@include breakpoint(tabletPortrait) {
+				display: flex;
+				flex-wrap: wrap;
+				margin: 15px 0;
+			}
+		}
+		.pillars-svg-container {
+			text-align: center;
+			svg {
+		    max-width: 40%;
+		    @include breakpoint(mobile) {
+		    	max-width: 60%;
+		    	margin-bottom: 40px;
+		    }
+			}
+		}
+		.pillar-hover {
+			cursor: pointer;
+		}
+		.pillars-container {
+			z-index: 2;
+	    position: absolute;
+	    width: 300px;
+	    height: auto;
+	    padding: 10px 15px;
+	    border-radius: 5px;
+	    background: #ffffff;
+	    -webkit-transition: all 0.5s ease;
+	    transition: all 0.5s ease;
+	    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.19), 0 2px 5px rgba(0, 0, 0, 0.23);
+	    color: #FFF;
+	    opacity: 0;
+	    @extend .transition;
+	    @include breakpoint(tabletPortrait) {
+	    	position: relative;
+	    	width: 50%;
+	    	top: 0 !important;
+	    	left: 0 !important;
+	    	bottom: 0 !important;
+	    	right: 0 !important;
+	    	opacity: 1;
+	    	border-radius: 0;
+	    }
+	    @include breakpoint(mobile) {
+	    	width: 100%;
+	    }
+	    .title {
+	    	font-size: 22px;
+	    	font-family: $avenirNext_Bold;
+	    	@include breakpoint(tabletPortrait) {
+	    		font-size: 18px;
+	    	}
+	    	@include breakpoint(mobile) {
+	    		font-size: 16px;
+	    	}
+	    }
+	    p {
+	    	font-size: 16px;
+	    	font-family: $avenirNext_Regular;
+	    	@include breakpoint(tabletPortrait) {
+	    		font-size: 14px;
+	    	}
+	    	&:last-of-type {
+	    		margin: 0;
+	    	}
+	    }
+			&.active {
+				opacity: 1;
+			}
+	    &::before {
+	    	content: "";
+		    left: 0;
+		    top: 35px;
+		    width: 20px;
+		    height: 20px;
+		    position: absolute;
+		    pointer-events: none;
+		    background: #FFFFFF;
+		    border-left: 1px solid #ffffff;
+		    border-bottom: 1px solid #ffffff;
+		    -webkit-transform: translateX(-50%) rotate(45deg);
+		    transform: translateX(-50%) rotate(45deg);
+	    	@include breakpoint(tabletPortrait) {
+					display: none;
+	    	}
+	    }
+	    &.right-arrow {
+	    	&::before {
+			    right: -20px;
+			    left: unset;
+	    	}
+	    }
+		}
+		#environmentContainer {
+			background-color: #309d47;
+			right: 11%;
+	    top: 15%;
+			&::before {
+				background: #309d47;
+		    border-left: 1px solid #309d47;
+		    border-bottom: 1px solid #309d47;
+			}
+		}
+		#economicContainer {
+			background-color: #058AC5;
+			left: 11%;
+			top: 15%;
+			&::before {
+				background: #058AC5;
+		    border-left: 1px solid #058AC5;
+		    border-bottom: 1px solid #058AC5;
+			}
+		}
+		#peopleContainer {
+			background-color: #E66E31;
+			bottom: 0;
+			right: 11%;
+			&::before {
+				background: #E66E31;
+		    border-left: 1px solid #E66E31;
+		    border-bottom: 1px solid #E66E31;
+		    top: 100px;
+			}
+		}
+		#communityContainer {
+			background-color: #C8A042;
+			bottom: 0;
+			left: 11%;
+			&::before {
+				background: #C8A042;
+		    border-left: 1px solid #C8A042;
+		    border-bottom: 1px solid #C8A042;
+		    top: 100px;
+			}
+		}
+	}
+	.sm-prime-holodings-banner {
+		&.cta-banner-key-1 {
+			.cta-banner-content {
+		    margin-left: 35%;
+			}
+		}
+    .subtitle {
+    	font-size: 22px !important;
+    	margin: 0;
+    }
+	}
+
+	.bdo-wrapper {
+		.title {
+			font-size: 18px;
+			font-family: $avenirNext_Bold;
+			@include breakpoint(tabletPortrait) {
+				font-size: 16px;
+			}
+		}
+		p {
+			font-size: 16px;
+			font-family: $avenirNext_Regular;
+			@include breakpoint(tabletPortrait) {
+				font-size: 14px;
+			}
+			&:last-of-type {
+				margin: 0;
+			}
+		}
+	}
+
+	.bdo-strategies {
+		display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-between;
+    -moz-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    @include breakpoint(tabletPortrait) {
+    	flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    	justify-content: center;
+    }
+    .strategy {
+			-webkit-flex-basis: 19%;
+			flex-basis: 19%;
+			max-width: 19%;
+			display: -webkit-box;
+			display: -moz-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-webkit-box-align: center;
+			-moz-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			align-items: center;
+			-webkit-box-pack: space-between;
+			-moz-box-pack: space-between;
+			-ms-flex-pack: space-between;
+			-webkit-justify-content: space-between;
+			justify-content: space-between;
+	    @include breakpoint(tabletPortrait) {
+				-webkit-flex-basis: 30%;
+				flex-basis: 30%;
+				max-width: 30%;
+				margin: 0 1.5%;
+				margin-bottom: 15px;
+	    }
+	    @include breakpoint(mobile) {
+				-webkit-flex-basis: 45%;
+				flex-basis: 45%;
+				max-width: 45%;
+	    }
+			.strat-icon {
+				width: 100%;
+				height: auto;
+				padding: 60px 10px;
+				text-align: center;
+				img {
+			    max-width: 70px;
+				}
+			}
+			p {
+				width: 100%;
+				margin-bottom: 0;
+				padding: 30px 5px;
+				text-align: center;
+				color: #ffffff;
+				font-family: $avenirNext_Regular;
+				font-size: 14px;
+				font-weight: 700;
+			}
+			&.strategy-1 {
+		    border: 2px solid #00517e;
+		    p {
+		    	background-color: #00517e;
+		    }
+			}
+			&.strategy-2 {
+		    border: 2px solid #6fb03c;
+		    p {
+		    	background-color: #6fb03c;
+		    }
+			}
+			&.strategy-3 {
+		    border: 2px solid #fdb913;
+		    p {
+		    	background-color: #fdb913;
+		    }
+			}
+			&.strategy-4 {
+		    border: 2px solid #dc751c;
+		    p {
+		    	background-color: #dc751c;
+		    }
+			}
+			&.strategy-5 {
+		    border: 2px solid #848689;
+		    p {
+		    	background-color: #848689;
+		    }
+			}
+    }
+	}
+
+	.find-creative-ways {
+		color: #FFF;
+	}
+
+	.bdo-slick {
+		.slick-track {
+		  display: flex !important;
+		}
+		.slick-slide {
+	    height: inherit !important;
+		}
+		.slick-list {
+			@extend .transition;
+		}
+		.bdo-wrapper-slick {
+			display: flex;
+			flex-wrap: wrap;
+	    align-items: center;
+			border: 3px solid $dark_blue;
+	    outline: 0;
+	    margin: auto 15px;
+			.left-content {
+				max-width: 30%;
+				flex-basis: 30%;
+				@include breakpoint(mobile) {
+					max-width: 100%;
+					flex-basis: 100%;
+				}
+				.img-wrapper {
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+			.right-content {
+				max-width: 70%;
+				flex-basis: 70%;
+				padding: 0 8%;
+				@include breakpoint(mobile) {
+					max-width: 100%;
+					flex-basis: 100%;
+					padding: 15px;
+				}
+				.top-content {
+					display: flex;
+					align-items: center;
+					img {
+						max-width: 80px;
+						@include breakpoint(mobile) {
+							max-width: 50px;
+						}
+					}
+					.title {
+						color: $blue;
+						font-family: $avenirNext_Demi;
+						font-size: 18px;
+						padding-left: 15px;
+					}
+				}
+				.bottom-content {
+					margin-top: 15px;
+					p {
+						color: $blue;
+						font-family: $avenirNext_Regular;
+						font-size: 16px;
+						@include breakpoint(tabletPortrait) {
+							font-size: 14px;
+						}
+						&:last-of-type {
+							margin: 0;
+						}
+						&.name, &.position {
+							margin: 0;
+							font-size: 16px;
+							@include breakpoint(tabletPortrait) {
+								font-size: 14px;
+							}
+						}
+					}
+				}
+			}
+			.below-content {
+				color: #FFF;
+				padding: 15px;
+				p {
+					font-family: $avenirNext_Regular;
+					font-size: 16px;
+					@include breakpoint(tabletPortrait) {
+						font-size: 14px;
+					}
+					&:last-of-type {
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.sustainability-priciples {
+		.smph-inner-subcontainer {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			@include breakpoint(tabletPortrait) {
+				flex-direction: column;
+			}
+			.title {
+				font-size: 22px;
+				font-family:$avenirNext_Bold;
+				color: $blue;
+				@include breakpoint(tabletPortrait) {
+					font-size: 18px;
+				}
+				@include breakpoint(tabletPortrait) {
+					font-size: 16px;
+				}
+			}
+			p {
+				font-size: 16px;
+				font-family: $avenirNext_Regular;
+				@include breakpoint(tabletPortrait) {
+					font-size: 14px;
+				}
+			}
+			.left-content {
+				@include breakpoint(mobile) {
+					text-align: center;
+				}
+			}
+			img {
+				width: 90%;
+				@include breakpoint(tabletPortrait) {
+					width: 70%;
+			    margin-bottom: 30px;
+				}
+			}
+		}
+	}
+
+	.belle-wrapper {
+		border-top: 1px solid #C39909;
+		.main-logo {
+			height: auto !important;
+			max-width: 150px;
+		}
+	}
+
+	.sustainability-mandate {
+		margin-top: 30px;
+		&.img-wrapper {
+			text-align: center;
+			img {
+				width: 60%;
+			}
+		}
+	}
+
+	.twogo-svg {
+		margin-top: -200px;
+		@include breakpoint(tabletLandscape) {
+			margin-top: -100px;
+		}
+		@include breakpoint(tabletPortrait) {
+			margin-top: 0;
+		}
+		.svg-wrapper {
+			display: flex;			
+			align-items: center;
+			@include breakpoint(mobile) {
+				flex-direction: column;
+			}
+		}
+		svg {
+			width: 100%;
+			@include breakpoint(mobile) {
+				width: 80%;
+				margin-bottom: 30px;
+			}
+		}
+		p {
+			font-family: $avenirNext_Regular;
+			font-size: 16px;
+			margin: 0;
+			padding-left: 30px;
+			width: 100%;
+			@include breakpoint(tabletPortrait) {
+				font-size: 14px;
+			}
+			@include breakpoint(mobile) {
+				padding-left: 0;
+			}
+		}
+	}
+
+	.twogo-animate {
+		opacity: 0;
+		@extend .transition;
+		&.twogo-show {
+			opacity: 1;
+		}
+	}
+
+	.years-of-sustainable  {
+		.slick-header {
+			.title {
+				font-size: 18px;
+				font-family: $avenirNext_Bold;
+			}
+		}
+	}
+
+	.slick-here-two  {
+		& > div {
+			@include breakpoint(mobile) {
+				margin-bottom: 30px;
+			}
+			&:last-of-type {
+				@include breakpoint(mobile) {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.cta-banner.cta-banner-link-out.cta-banner-key-1.sm-prime-holodings-banner {
+		.cta-banner-image {
+			@include breakpoint(mobile) {
+		    object-position: -80px 0;
+			}
+		}
+	}
+
+}

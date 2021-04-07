@@ -1,0 +1,138 @@
+.smph-container {
+	max-width: 90%;
+	margin: auto;
+}
+
+.smph-inner-container {
+	max-width: 85%;
+	margin: auto;
+}
+
+.smph-inner-subcontainer {
+	max-width: 75%;
+	margin: auto;
+	@include breakpoint(tabletLandscape) {
+		max-width: 85%;
+	}
+}
+
+.smph-center-container {
+	max-width: 900px;
+	margin: auto;
+	@include breakpoint(tabletLandscape) {
+		max-width: 80%;
+	}
+}
+
+.transition {
+	-webkit-transition: all .2s ease-out;
+	-moz-transition: all .2s ease-out;
+	-o-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+}
+
+.light-blue-bg {
+	background-color: $lighter_blue;
+}
+
+
+.smph-btn {
+	padding: 15px 25px;
+	font-family: $avenirNext_Regular;
+	font-size: 16px;
+	margin-top: 0;
+	text-decoration: none !important;
+	display: inline-block;
+	// min-width: 150px;
+	text-align: center;
+	@extend .transition;
+	@include breakpoint(tabletPortrait) {
+		font-size: 12px;
+		padding: 5px 10px;
+	}
+	@include breakpoint(mobile) {
+		white-space: nowrap;
+	}
+	&.blue-btn {
+		background-color: $blue;
+		color: #FFF;
+		&:hover, &:active, &:focus {
+			background-color: $dark_blue;
+		}
+	}
+	&.white-btn {
+		background-color: #FFF;
+		color: $blue;
+		&:hover, &:active, &:focus {
+			background-color: $blue;
+			color: #FFF;
+		}
+	}
+	&.green-btn {
+		background-color: $green;
+		color: #FFF;
+		&:hover, &:active, &:focus {
+			background-color: #44ca3c;
+			color: #FFF;
+		}
+	}
+	&.brown-btn {
+		background-color: $brown;
+		color: #FFF;
+	}
+}
+
+
+.slick-arrow {
+	z-index: 3;
+	&::before {
+		content: "";
+		background-size: 100% !important;
+		display: inline-block;
+		color: #000;
+		font-family: "Font Awesome 5 Free"; /* This is the correct font-family*/
+		font-style: normal;
+		font-weight: normal;
+		font-size: 35px;
+		font-weight:900;
+		@include breakpoint(mobile) {
+			font-size: 20px;
+		}
+	}
+	&.slick-next {
+		@include breakpoint(mobile) {
+			right: -10px;
+		}
+		&::before {
+			content: '\f054'; /* You should use \ and not /*/
+		}
+	}
+	&.slick-prev {
+		@include breakpoint(mobile) {
+			left: -10px;
+		}
+		&::before {
+			content: '\f053'; /* You should use \ and not /*/
+		}
+	}
+}
+
+.remove-footer-margin {
+	margin-bottom: -40px;
+}
+
+.full-width-bg {
+	&.bg-blue-light  {
+		position: relative;
+		&::before {
+			content: '';
+			width: 200%;
+	    height: 100%;
+	    background-color: #e1f2f9;
+	    position: absolute;
+	    left: -50%;
+	    top: 0;
+	    z-index: -1;
+		}
+	}
+}

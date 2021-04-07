@@ -1,0 +1,162 @@
+#back-to-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $blue;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  .fa {
+  	color: #FFF;
+  	font-size: 20px;
+  }
+	&:hover,&:active {
+	  cursor: pointer;
+	  background-color: $dark_blue;
+	}
+	&.show {
+	  opacity: 1;
+	  visibility: visible;
+	}
+}
+
+.site-footer {
+	background-color: #EAEAEA;
+	padding: 50px 0;
+	.logo-wrapper {
+		margin-bottom: 30px !important;
+		@include breakpoint(mobile) {
+			text-align: center;
+		}
+		img {
+			max-width: 180px !important;
+			margin: 0 !important; 
+	    height: auto;
+	    width: 100%;
+		}
+	}
+	.footer-details {
+		display: flex;
+		flex-direction: column;
+		align-items: baseline;
+		@include breakpoint(mobile) {
+			align-items: center;
+			text-align: center;
+		}
+		.title {
+			font-size: 14px;
+			color: $dark_blue;
+			font-family: $avenirNext_Regular;
+			margin-bottom: 20px;
+			@include breakpoint(mobile) {
+				margin: 20px 0 10px;
+			}
+		}
+		address, p, a {
+			font-size: 14px;
+			color: #000;
+			font-family: $avenirNext_Regular;	
+			text-decoration: none;
+		}
+		.big-link {
+			margin-top: 15px;
+			@include breakpoint(mobile) {
+				margin-top: 15px !important;
+			}
+			a {
+				color: $dark_blue;
+			}
+		}
+		a {
+			&:hover {
+				color: $blue !important;
+			}
+		}
+	}
+	.footer-sm {
+		margin-top: -40px;
+		@include breakpoint(mobile) {
+			text-align: center;
+			margin-top: 20px;
+		}
+		.title {
+			font-size: 14px;
+			color: $dark_blue;
+			font-family: $avenirNext_Regular;
+			margin-bottom: 15px;
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			align-items: center;
+	    flex-direction: row;
+			@include breakpoint(mobile) {
+				justify-content: center;
+			}
+			li {
+				font-size: 0;
+		    margin: 0 12px;
+				&.sm-footer {
+					&.fb {
+						a {
+					    background-position: -2px 0;
+					    width: 11px;
+					    height: 20px;
+						}
+					}
+					&.twitter {
+						a {
+							background-position: -15px 0;
+							width: 18px;
+							height: 20px;
+						}
+					}
+					&.yt {
+						a {
+							background-position: -35px 0;
+							width: 20px;
+							height: 20px;
+						}
+					}
+					&.linked-in {
+						a {
+							background-position: -55px 0;
+							width: 19px;
+							height: 20px;
+						}
+					}
+					a {
+						background: url(assets/images/sm-footer-sprite.png) no-repeat;
+						background-position: 0 0;
+						font-size: 0;
+						display: inline-block;
+						background-size: 75px;
+					}
+				}
+			}
+		}
+	}
+	.copyright {
+		margin-top: 15px;
+		p {
+			margin: 0;
+			font-family: $avenirNext_Regular;
+			font-size: 14px;
+			@include breakpoint(mobile) {
+				margin-top: 15px;
+				text-align: center;
+			}
+		}
+	}
+}
