@@ -1,0 +1,59 @@
+.about-forbes-section {
+	background-color: #f2f5f9;
+	.imgs-wrapper {
+		text-align: center;
+		margin-top: 50px;
+		img {
+			width: 100%;
+			max-width: 230px;
+			margin: 0 60px;
+			@include breakpoint(tabletPortrait) {
+				max-width: 150px;
+			}
+			@include breakpoint(mobile) {
+		    max-width: 35%;
+		    margin:0 15px;
+			}
+		}
+	}
+	p {
+		font-family: $avenirNext_Regular;
+		font-size: 16px;
+		@include breakpoint(tabletPortrait) {
+			font-size: 14px;
+		}
+	}
+}
+
+.awards-citations-accordion {
+	.accordion-chevron-wrapper {
+		border: 0;
+		.card-header {
+			background-color: transparent;
+			padding: 0;
+			border: 0;
+			button {
+				display: flex;
+		    align-items: center;
+		    justify-content: space-between;
+		    width: 100%;
+		    color: #000;
+		    font-family: $avenirNext_Regular;
+	    	text-decoration: none;
+	    	outline: 0;
+	    	box-shadow: none;
+	    	padding: 5px 0;
+		    .fa {
+		    	color: $blue;
+		    }
+			}
+		}
+		.card-body {
+			p,li {
+				font-family: $avenirNext_Regular;
+		    font-size: 14px;
+			}
+
+		}
+	}
+}

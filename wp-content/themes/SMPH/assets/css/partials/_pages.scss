@@ -1,0 +1,1014 @@
+.smph-wrapper {
+	padding: 60px 0;
+	@include breakpoint(mobileLg) {
+		padding: 30px 0;
+	}
+	&.smph-sub-wrapper {
+		padding: 15px 0;
+	}
+	.section-title {
+		.title {
+			text-align: center;
+			color: $blue;
+			font-family: $avenirNext_Bold;
+			font-size: 22px;
+			text-transform: uppercase;
+			margin-bottom: 30px;
+			@include breakpoint(tabletPortrait) {
+				font-size: 20px;
+			}
+			@include breakpoint(mobile) {
+				font-size: 18px;
+			}
+		}
+	}
+	&.view-all-wrapper {
+		.section-title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 15px;
+			.title {
+				font-size: 22px;
+				text-transform: unset;
+				margin: 0;
+				@include breakpoint(tabletPortrait) {
+					font-size: 20px;
+				}
+				@include breakpoint(mobileLg) {
+					font-size: 18px;
+				}
+			}
+			.see-all {
+				font-family: $avenirNext_Regular;
+				font-size: 14px;
+				color: $blue;
+				text-decoration: none;
+			}
+		}
+	}
+	&.bg-teal {
+		background-color: #e8f1f4;
+	}
+	&.parallax {
+		height: 28vw;
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		z-index: -1;
+		&.at-a-glance-parallax {
+			@include breakpoint(tabletPortrait) {
+				height: 50vw;
+			}
+			@include breakpoint(mobile) {
+				height: auto;
+			}
+			.parallax-content {
+				@include breakpoint(mobile) {
+			    text-align: center
+				}
+				.left-content {
+					@include breakpoint(tabletPortrait) {
+						margin-bottom: 1rem;
+					}
+				}
+			}
+		}
+	}
+	&.parallax-body {
+		.section-body {
+			height: 28vw;
+			background-attachment: fixed;
+			background-position: center center;
+			background-repeat: no-repeat;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			z-index: -1;
+		}
+	}
+	.section-body {
+		p {
+			font-family: $avenirNext_Regular;
+			font-size: 16px;
+			@include breakpoint(tabletPortrait) {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.mainbody-content {
+  padding: 40px 0;
+  h1,h2,h3,h4,h6 {
+  	font-family: $avenirNext_Bold;
+  }
+  h5 {
+  	font-family: $avenirNext_Regular;
+  	font-size: 18px;
+    line-height: unset;;
+  	@include breakpoint(tabletPortrait) {
+  		font-size: 16px;
+  	}
+  	@include breakpoint(mobile) {
+  		font-size: 14px;
+  	}
+  	br {
+  		@include breakpoint(mobile) {
+  			display: none;
+  		}
+  	}
+  }
+  h3 {
+  	font-size: 18px;
+		@include breakpoint(mobile) {
+			font-size: 16px;
+		}
+  	br {
+  		@include breakpoint(mobile) {
+  			display: none;
+  		}
+  	}
+  }
+	h2 {
+		font-size: 22px;
+		font-family: $avenirNext_Bold;
+		color: $dark_blue;
+  	@include breakpoint(tabletPortrait) {
+  		font-size: 18px;
+  	}
+	}
+	p,li {
+		font-family: $avenirNext_Regular;
+		font-size: 16px;
+		@include breakpoint(tabletPortrait) {
+			font-size: 14px;
+		}
+  	br {
+  		@include breakpoint(mobile) {
+  			display: none;
+  		}
+  	}
+  	&.br-block  {
+  		br {
+	  		display: block;
+  		}
+  	}
+	}
+	a {
+		color: $blue;
+		text-decoration: none;
+	}
+	li {
+		a {
+			color: $blue;
+		}
+	}
+	img {
+		height: auto;
+	}
+	blockquote {
+		display: flex;
+		flex-direction: column;
+		&.yellow-border {
+			&::before,&::after {
+				background-color: #93964e;
+			}
+		}
+		&::before,&::after {
+			content: '';
+			display: inline-block;
+			height: 2px;
+			width: 60%;
+			background-color: $dark_blue;
+			margin: 15px 0;
+		}
+		p {
+			padding-left: 10px;
+			font-family: $avenirNext_Regular;
+			margin: 0;
+			font-size: 18px;
+	    font-style: italic;
+	    color: #545454;
+	    &:last-of-type {
+	    	margin-bottom: 0;
+	    }
+		}
+		cite {
+			font-family: $avenirNext_Regular;
+			font-size: 14px;
+			padding-left: 10px;
+			margin-top: 15px;
+			strong {
+				font-family: $avenirNext_Bold;
+			}
+		}
+	}
+
+	.main-counter-wrapper {
+		margin: 25px 0;
+		@include breakpoint(mobile) {
+			margin: 10px 0;
+		}
+		& > .wp-block-group__inner-container {
+			display: flex;
+			justify-content: center;
+			@include breakpoint(mobile) {
+				flex-direction: column;
+			}
+			.wp-block-group__inner-container {
+				position: relative;
+				margin: 0 50px;
+				@include breakpoint(mobile) {
+					margin: 15px 0;
+					text-align: center;
+				}
+			}
+		}
+		.floating-element {
+			font-size: 18px;
+			font-family: $avenirNext_Regular;
+			margin: 0;
+			position: absolute;
+			top: -20px;
+			left: 0;
+			@include breakpoint(tabletPortrait) {
+				font-size: 14px;
+			}
+			@include breakpoint(mobile) {
+				position: relative;
+				top: 0;
+			}
+		}
+		.count {
+			font-size: 38px;
+			font-family: $avenirNext_Bold;
+			margin: 0;
+			text-align: center;
+			color: $dark_blue;
+			@include breakpoint(tabletPortrait) {
+				font-size: 26px;
+			}
+		}
+		.description {
+			font-size: 16px;
+			font-family: $avenirNext_Regular;
+			margin: 0;
+			text-align: center;
+			@include breakpoint(tabletPortrait) {
+				font-size: 14px;
+			}
+		}
+	}
+	.photo-text-wrapper {
+		.bg-color-blue {
+			background-color: $blue;
+			margin-left: 0;
+			display: flex;
+			align-items: center;
+			padding: 30px;
+			color: #FFF;
+		}
+		.wp-block-image {
+			margin: 0;
+		}
+	}
+}
+
+.cta-banner {
+	height: 350px;
+  background-size: cover;
+  background-position: center center;
+  .smph-inner-subcontainer {
+  	height: 100%;
+  	display: flex;
+	  align-items: center;
+  }
+  .cta-banner-content {
+  	h4 {
+  		font-size: 38px;
+  		color: #FFF;
+  		font-family: $avenirNext_Bold;
+  		@include breakpoint(mobile) {
+  			font-size: 26px;
+  		}
+  	}
+  }
+  &.cta-banner-link-out {
+  	height: auto;
+  	padding: 0;
+  	position: relative;
+  	overflow: hidden;
+  	&:hover {
+  		.cta-banner-image {
+  			transform: scale(1.1);
+  		}
+  	}
+  	&.cta-banner-key-0 {
+  		.cta-banner-image {
+  			@include breakpoint(mobile) {
+  				// object-position: -300px 0;
+  			}
+  		}
+  	}
+  	&.cta-banner-key-2 {
+  		.cta-banner-image {
+  			@include breakpoint(mobile) {
+  				object-position: -160px 0;
+  			}
+  		}
+  	}
+  	.cta-banner-image {
+  		width: 100%;
+  		height: 30vw;
+  		object-fit: cover;
+  		transform: scale(1);
+			-webkit-transition: all 0.8s;
+			-moz-transition: all 0.8s;
+			-o-transition: all 0.8s;
+			transition: all 0.8s;
+
+  		@include breakpoint(mobile) {
+		    height: 70vw;
+  			object-fit: cover;
+  		}
+  	}
+	  .smph-inner-subcontainer {
+	  	position: absolute;
+	  	top: 0;
+	  	bottom: 0;
+	  	left: 0;
+	  	right: 0;
+	  	.cta-banner-content {
+	  		width: 100%;
+	  		img {
+	  			@include breakpoint(tabletPortrait) {
+	  				max-width: 150px;
+	  				height: auto;
+	  			}
+	  		}
+	  		h2 {
+	  			font-size: 38px;
+	  			color: #FFF;
+	  			font-family: $avenirNext_Bold;
+			  	@include breakpoint(tabletPortrait) {
+			  		font-size: 22px;
+			  	}
+			  	@include breakpoint(mobileLg) {
+			  		font-size: 18px;
+			  	}
+			  	br {
+			  		@include breakpoint(tabletPortrait) {
+			  			display: none;
+			  		}
+			  	}
+	  		}
+	  		p {
+	  			font-size: 16px;
+	  			color: #FFF;
+	  			font-family: $avenirNext_Regular;
+			  	@include breakpoint(tabletPortrait) {
+			  		font-size: 12px;
+			  	}
+			  	br {
+			  		@include breakpoint(mobile) {
+			  			display: none;
+			  		}
+			  	}
+	  		}
+				.smph-btn {
+					margin-top: 5px;
+				}
+	  	}
+	  }
+  }
+  &.cta-banner-link-out-with-numbers {
+  	.smph-inner-subcontainer {
+	  	.cta-banner-content {
+	  		width: 100%;
+	  		display: flex;
+	  	}
+	  	.numbers-content {
+	  		display: flex;
+		    flex-wrap: wrap;
+  			justify-content: center;
+        max-width: 400px;
+		    margin-left: 50px;
+		    margin-top: -10px;
+	  		.numbers-wrapper {
+	  			width: 50%;
+	  			text-align: center;
+	  			position: relative;
+	  			.floating-element {
+						font-size: 18px;
+						font-family: $avenirNext_Regular;
+						margin: 0;
+						position: absolute;
+						top: -20px;
+						left: 0;
+						text-align: center;
+						right:  0;
+	  			}
+	  			.count {
+	  				font-size: 38px;
+	  				font-family: $avenirNext_Bold;
+	  				margin: 0;
+	  				@include breakpoint(tabletPortrait) {
+	  					font-size: 26px;
+	  				}
+	  			}
+	  			.description {
+	  				font-size: 16px;
+	  				font-family: $avenirNext_Regular;
+				    line-height: 16px;
+	  				@include breakpoint(tabletPortrait) {
+	  					font-size: 14px;
+	  					line-height: 14px;
+	  				}
+	  			}
+	  		}
+	  	}
+  	}
+  }
+}
+
+
+.page-id-1420 {
+	.cta-banner.cta-banner-link-out {
+		&.cta-banner-key-2 {
+			.smph-inner-subcontainer {
+				.cta-banner-content {
+				  @include breakpoint(mobile) {
+		  	    margin-top: 10rem;
+				  }
+				}
+			}
+		}
+		&.cta-banner-key-4 {
+			.cta-banner-image {
+			  @include breakpoint(mobile) {
+			    object-position: -120px 0;
+			  }
+			}
+			.smph-inner-subcontainer {
+				.cta-banner-content {
+					margin-top: 8rem;
+				  @include breakpoint(mobile) {
+		  	    margin-top: 8rem;
+				  }
+				}
+			}
+		}
+	}
+}
+
+.featured-stories,.multimedia-video {
+	.featured-stories-wrapper,.multimedia-video-wrapper {
+		text-decoration: none;
+		outline: 0;
+		.img-wrapper {
+			img {
+				width: 100%;
+				height: 20vw;
+				object-fit: cover;
+				@include breakpoint(mobile) {
+					height: 65vw;
+				}
+			}
+		}
+		.desc {
+			border-bottom: 1px solid #000;
+			padding-bottom: 15px;
+			.stories-type {
+				font-size: 16px;
+				font-family: $avenirNext_Demi;
+				margin: 10px 0 0;
+				display: inline-block;
+				color: #000;
+			}
+			.title {
+				font-size: 18px;
+				font-family: $avenirNext_Regular;
+				margin: 5px 0 10px;
+				color: #000;
+				@include breakpoint(tabletLandscape) {
+					font-size: 16px;
+				}
+			}
+			p {
+				font-size: 16px;
+				font-family: $avenirNext_Regular;
+				color: #000;
+				margin: 0;
+				@include breakpoint(tabletPortrait) {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+.multimedia-video {
+	padding-top: 0;
+	.multimedia-video-wrapper {
+		margin-bottom: 30px;
+		.img-wrapper {
+			img {
+				height: 12vw;
+				@include breakpoint(mobile) {
+					height: 42vw;
+				}
+			}
+		}
+		.desc {
+			.title {
+				color: $blue;
+			}
+		}
+	}
+	.pagination { 
+		margin-top: 20px;
+	}
+}
+
+.featured-video {
+	padding: 0;
+	.row {
+		margin: 0;
+	}
+	.featured-video-info {
+		padding-left: 7.5%;
+		background-color: #EAEAEA;
+		display: flex;
+    align-items: center;
+    padding-right: 80px;
+    @include breakpoint(tabletPortrait){
+    	padding-right: 0;
+    }
+    @include breakpoint(mobile){
+    	padding: 50px 30px;
+    }
+    &.blue-bg {
+    	background-color: #dae3f4;
+    }
+    &.dark-blue-bg {
+    	background-color: $dark_blue;
+    }
+    .title {
+    	font-family: $avenirNext_Demi;
+    	font-size: 22px;
+    	margin-bottom: 20px;
+	    @include breakpoint(tabletPortrait){
+	    	margin-bottom: 10px;
+	    	font-size: 18px;
+	    }
+	    @include breakpoint(mobile) {
+	    	font-size: 16px;
+	    }
+    	&.green-title {
+    		color: $green;
+    	}
+    	&.blue-title {
+    		color: $blue;
+    	}
+    	&.big-title {
+    		font-size: 26px;
+		    @include breakpoint(tabletPortrait){
+	    		font-size: 20px;
+		    }
+    	}
+    	&.bigger-title {
+    		font-size: 30px;
+		    @include breakpoint(tabletPortrait){
+	    		font-size: 20px;
+		    }
+    	}
+    }
+    .video-title {
+    	font-family: $avenirNext_Bold;
+    	font-size: 18px;
+    	color: #000;
+	    @include breakpoint(tabletPortrait){
+	    	font-size: 16px;
+	    }
+    }
+    p {
+    	font-family: $avenirNext_Regular;
+    	font-size: 16px;
+    	margin: 0;
+    	@include breakpoint(tabletPortrait) {
+    		font-size: 14px;
+    	}
+    }
+    .smph-btn {
+    	margin-top: 20px;
+    }
+	}
+	.featured-video-img {
+		padding: 0;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.smph-breadcrumbs {
+	border-bottom: 1px solid #efefef;
+	border-top: 1px solid #efefef;
+	.breadcrumbs {
+		display: flex;
+		padding: 10px 0;
+		list-style: none;
+		margin: 0;
+		@include breakpoint(mobile) {
+			flex-wrap: wrap;
+		}
+		li {
+			font-size: 12px;
+			font-family: $avenirNext_Regular;
+			color: #585858;
+			&.separator {
+				margin: 0 10px;
+			}
+			a {
+				color: #585858;
+				text-decoration: none;
+				&:hover {
+					color: $blue;
+				}
+			}
+		}
+	}
+}
+
+.pdf-file-container {
+	padding-top: 0;
+	&.smph-wrapper.view-all-wrapper {
+		.section-title {
+			h3 {
+				@include breakpoint(mobile) {
+					margin-bottom: 15px;
+				}
+			}
+			@include breakpoint(mobile) {
+				flex-direction: column;
+			}
+		}
+	}
+	.smph-center-container {
+		position: relative;
+	}
+	.list-style-wrapper {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		border-bottom: 1px solid #707070;
+		padding: 20px 0;
+		justify-content: space-between;
+		.title {
+			font-family: $avenirNext_Regular;
+			font-size: 18px;
+			color: #000000;
+			margin: 0;
+			// @include breakpoint(tabletPortrait) {
+			// 	font-size: 20px;
+			// }
+			// @include breakpoint(mobile) {
+			// 	font-size: 16px;
+		 //    line-height: 22px;
+			// }
+		}
+		.fa-file-download {
+			margin-left: 15px;
+	    font-size: 26px;
+	    height: 26px;
+	    color: $blue;
+		}
+		.info {
+			display: flex;
+			flex-direction: column;
+			.date {
+				font-size: 14px;
+				color: #000;
+				font-family: $avenirNext_Regular;
+				margin: 0;
+			}
+		}
+	}
+	&.ip-cd-download {
+		.ip-cd-wrapper {
+			// border-bottom: 1px solid #707070;
+			padding-bottom: 25px;
+		}
+		.list-style-wrapper {
+			&:first-of-type {
+				padding-top: 0;
+			}
+			.title {
+				color: $blue;
+			}
+		}
+	}
+	&.ajax-loader-pdf {
+		.smph-center-container  {
+			min-height: 200px;
+		}
+		.title-wrapper  {
+			.date {
+				margin: 0;
+				color: #545454;
+				font-size: 12px;
+				font-family: $avenirNext_Regular;
+			}
+		}
+		select {
+			font-family: $avenirNext_Regular;
+			border: 1px solid $blue;
+			border-radius: 5px;
+			padding: 5px;
+			outline: 0;
+			font-size: 14px;
+		}
+	}
+}
+
+figcaption {
+	font-family: $avenirNext_Regular;
+	font-size: 12px;
+}
+
+.wp-block-table {
+	&.table-layout-fixed {
+		table {
+			table-layout: fixed;
+		}
+	}
+	td,th {
+		padding: 10px 15px;
+    border-bottom: 1px solid #FFF !important;
+    border-right: 1px solid #FFF !important;
+    &:last-of-type {
+    	border-right: 0 !important;
+    }
+	}
+	td {
+		background-color: #F2F2F2;
+		font-family: $avenirNext_Regular;
+		font-size: 16px;
+		@include breakpoint(tabletPortrait) {
+			font-size: 14px;
+		}
+		a {
+			color: $blue;
+			text-decoration: none;
+		}
+	}
+	th {
+    font-family: $avenirNext_Regular;
+    white-space: nowrap;
+    background-color: $lighter_blue;
+	}
+	&.tbl-colspan {
+		padding-top: 50px;
+		&.w-120 {
+			table {
+				@include breakpoint(mobile) {
+					width: 120%;
+				}
+			}
+		}
+		table {
+			position: relative;
+		}
+		tr {
+			&:first-of-type {
+				th {
+			    text-align: center;
+			    background-color: $dark_blue;
+			    color: #FFF;
+			    font-family: $avenirNext_Regular;
+			    position: absolute;
+			    top: -40px;
+			    width: 100%;
+				}
+			}
+		}
+	}
+	figcaption {
+		font-family: $avenirNext_Regular;
+		font-size: 14px;
+	}
+	&.economic-performance {
+		th {
+			background-color: #5a96bd;
+			color: #FFF;
+		}
+		td {
+			background-color: #ece8d5
+		}
+		tr {
+			&:nth-of-type(3),
+			&:nth-of-type(4),
+			&:nth-of-type(5),
+			&:nth-of-type(6),
+			&:nth-of-type(7) {
+				td {
+					background-color: #fbf9f4;
+					&:first-of-type {
+						padding-left: 30px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.cvf-pagination-nav {
+  margin: 50px 0 0;
+  ul {
+  	list-style: none;
+  	display: flex;
+  	align-items: center;
+  	padding: 0;
+  	margin: 0;
+  	justify-content: center;
+  	li {
+			font-size: 16px;
+	    font-family: $avenirNext_Regular;
+	    margin: 0 5px;
+	    text-decoration: none;
+	    color: $blue;
+	    &.selected {
+	    	color: #000;
+	    }
+  		&.active {
+  			cursor: pointer;
+  		}
+  	}
+  }
+}
+
+.page-template-message-page {
+	.mainbody-content {
+		p {
+			margin-bottom: 1rem;
+			@include breakpoint(mobile) {
+				margin-top: 0 !important;
+			}
+		}
+	}
+	.w-100 {
+		img {
+			width: 100%
+		}
+	}
+	.wp-block-column:not(:first-child) {
+		margin-left: 15px;
+		@include breakpoint(mobile) {
+			margin: 0;
+		}
+	}
+	.col-signature {
+		table,tbody,tr,td {
+			@include breakpoint(mobile) {
+				width: 100%;
+				display: block;
+			}
+		}
+	}
+}
+
+.img-page-linkout {
+	.row {
+		margin: 0;
+	}
+  .title {
+  	font-family: $avenirNext_Demi;
+  	font-size: 20px;
+  	margin-bottom: 20px;
+    @include breakpoint(tabletPortrait){
+    	margin-bottom: 10px;
+    }
+  	&.green-title {
+  		color: $green;
+  	}
+  	&.blue-title {
+  		color: $blue;
+  	}
+  	&.big-title {
+  		font-size: 26px;
+	    @include breakpoint(tabletPortrait){
+    		font-size: 20px;
+	    }
+  	}
+  	&.bigger-title {
+  		font-size: 38px;
+	    @include breakpoint(tabletPortrait){
+    		font-size: 20px;
+	    }
+  	}
+  }
+  p {
+  	font-size: 14px;
+  	font-family: $avenirNext_Regular;
+  	color: #FFF;
+  	&:last-of-type {
+  		margin: 0;
+  	}
+  }
+	.left-content {
+		padding-left: 7.5%;
+    background-color: #EAEAEA;
+    display: flex;
+    align-items: center;
+    padding-right: 80px;
+    @include breakpoint(mobileLg) {
+    	padding: 30px 7.5%;
+    }
+    &.dark-blue-bg {
+    	background-color: $dark_blue;
+    }
+	}
+	.img-full {
+		width: 100%;
+		height: 30vw;
+		object-fit: cover;
+    @include breakpoint(mobileLg) {
+			height: 50vw;
+    }
+	}
+	.right-content {
+		padding: 0;
+	}
+	&.bg-img-txt {
+		& > div {
+			position: relative;
+		}
+		.details-info {
+			position: absolute;
+			bottom: 12%;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			justify-content: center;
+			left: 15%;
+		}
+		.left-content {
+			padding: 0;
+			padding-right: 1px;
+		}
+		.right-content {
+			padding-left: 1px;
+		}
+	}
+}
+
+.custom-quicklinks {
+	padding-top: 0;
+	.row {
+		margin: 0 -40px;
+		@include breakpoint(mobile) {
+			margin: 0 -15px;
+		}
+	}
+	.quicklinks {
+		padding: 0 40px;
+		@include breakpoint(mobile) {
+			padding: 0 15px;
+		}
+		.quicklinks-wrapper {
+			text-decoration: none;
+			overflow: hidden;
+			display: inline-block;
+			padding-bottom: 30px;
+			border-bottom: 1px solid $blue;
+			margin-bottom: 60px;
+		}
+		img {
+			width: 100%;
+			height: 22.5vw;
+			object-fit: cover;
+			@include breakpoint(mobileLg) {
+				height: 50vw;
+			}
+		}
+		.quicklinks-title {
+			font-size: 22px;
+			font-family: $avenirNext_Bold;
+			color: $blue;
+			margin: 10px 0 0;
+			@include breakpoint(tabletPortrait) {
+				font-size: 20px;
+			}
+			@include breakpoint(mobile) {
+				font-size: 18px;
+			}
+		}
+	}
+}
