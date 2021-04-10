@@ -40,8 +40,8 @@
 				<?php wp_reset_query();  ?>
 				<div class="article-sidebar">
 					
-					<?php if($post_type == 'press_release'){ ?>
-						<h4 class="sidebar-title">Other Press Release</h4>
+					<?php if($post_type == 'company_releases'){ ?>
+						<h4 class="sidebar-title">Other Company Releases</h4>
 					<?php } else if( $post_type == 'latest_news' ) { ?>
 						<h4 class="sidebar-title">Other News</h4>
 					<?php } else { ?>
@@ -101,8 +101,8 @@
 				  	} else {
 				  		if($post_type == 'story_kasama_sm') {
 				  			$go_back_link = get_permalink(687);
-				  		} else if($post_type == 'press_release') {
-				  			$go_back_link = get_permalink(448).'?type=pressRelease';
+				  		} else if($post_type == 'company_releases') {
+				  			$go_back_link = get_permalink(448).'?type=companyRelease';
 				  		} else if($post_type == 'stories') {
 				  			$go_back_link = get_permalink(448).'?type=stories';
 				  		} else if($post_type == 'latest_news') {

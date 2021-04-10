@@ -122,6 +122,9 @@
 				list-style: none;
 				column-count: 2;
 		    column-width: 200px;
+		    &.single-column {
+		    	column-count: 1;
+		    }
 				@include breakpoint(mobileLg) {
 					padding: 0;
 					column-count: 1;

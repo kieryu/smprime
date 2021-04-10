@@ -187,6 +187,8 @@ function custom_breadcrumbs() {
                 foreach ( $anc as $ancestor ) {
                     if($ancestor == 446) {
                         $breadcrumbs_link = get_permalink(2317);
+                    } else if($ancestor == 439) {
+                        $breadcrumbs_link = get_permalink(1672);
                     } else if($ancestor == $parent_page_link && $ancestor != 448 && $ancestor != 444) {
                         $breadcrumbs_link = '#';
                     } else {

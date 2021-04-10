@@ -10,6 +10,8 @@ require get_template_directory() . '/inc/custom_post_type/media.php';
 require get_template_directory() . '/inc/custom_post_type/investors.php';
 // ============= CPT ABOUT US ============= 
 require get_template_directory() . '/inc/custom_post_type/about-us.php';
+// ============= CPT SUSTAINABILITY ============= 
+require get_template_directory() . '/inc/custom_post_type/sustainability.php';
 
 // ------------REMOVE POST TYPE ------------
 add_action( 'admin_menu', 'remove_default_post_type' );

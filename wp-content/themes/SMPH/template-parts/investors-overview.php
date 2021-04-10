@@ -5,7 +5,7 @@
 	$cpt_arg = array(
 	  'post_type' => 'page',
 	  'post_parent' => 446,
-	  'posts_per_page' => 8,
+	  'posts_per_page' => 9,
 		'post__not_in' => array($post->ID),
 		'order' => 'ASC'
 	);

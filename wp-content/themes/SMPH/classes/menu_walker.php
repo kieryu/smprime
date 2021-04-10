@@ -7,11 +7,23 @@ class custom_sub_walker extends Walker_Nav_Menu {
         $indent = str_repeat( "\t", $depth );
         // $output .= "\n$indent<ul role=\"menu\" class=\" dropdown-menu\">\n";
         // $output .= "\n$indent<div class='dropdown-menu'><div class='submenu-content container'>"."<h3 class='submenu-title col-3'>".$this->curItem->title."</h3>"."<ul role='menu' class='col-7'>\n";
-        //print '<pre>';print_r($this->curItem);print'</pre>';
+
+        if ($args->has_children) {
+            $locations = get_nav_menu_locations(); // Getting the locations of the nav menus array.
+            $menu = wp_get_nav_menu_object( $locations['main_header'] ); // Getting the menu calling the walker from the array.
+            $menu_items = wp_get_nav_menu_items($menu->term_id); // Getting the menu item objects array from the menu.
+            $menu_item_parents = array_map(function($o) { return $o->menu_item_parent; }, $menu_items); // Getting the parent ids by looping through the menu item objects array. This will give an array of parent ids and the number of their children.
+            $children_count = array_count_values($menu_item_parents)[$this->curItem->ID]; // Get number of children menu item has.
+        }
+        $class = '';
+        if($children_count && $children_count <= 4) {
+            $class = 'single-column';
+        }
+
         if($this->curItem->object == 'page') {
-            $output .= "\n$indent<div class='dropdown-menu'><div class='submenu-content'>"."<h3 class='submenu-title'><a href='".$this->curItem->url."' class='submenu-title'>".$this->curItem->title."</a></h3>"."<ul role='menu'>\n";
+            $output .= "\n$indent<div class='dropdown-menu'><div class='submenu-content'>"."<h3 class='submenu-title'><a href='".$this->curItem->url."' class='submenu-title'>".$this->curItem->title."</a></h3>"."<ul role='menu' class='".$class."'>\n";
         } else {
-            $output .= "\n$indent<div class='dropdown-menu'><div class='submenu-content'>"."<h3 class='submenu-title'>".$this->curItem->title."</h3>"."<ul role='menu'>\n";
+            $output .= "\n$indent<div class='dropdown-menu'><div class='submenu-content'>"."<h3 class='submenu-title'>".$this->curItem->title."</h3>"."<ul role='menu' class='".$class."'>\n";
         }
         // $output .= '<h3>'.$this->curItem->post_title.'</h3>';
     }
@@ -54,11 +66,7 @@ class custom_sub_walker extends Walker_Nav_Menu {
 
         /*if the current menu item has children and it's the parent, set the dropdown attributes*/
         if ( $args->has_children && $depth === 0 ) {
-            if(in_array($item->object_id,array(439,446))) {
-                $atts['href']           = '#';
-            } else {
-                $atts['href'] = ! empty( $item->url ) ? $item->url : '';
-            }
+            $atts['href'] = ! empty( $item->url ) ? $item->url : '';
             $atts['data-toggle']    = 'dropdown';
             $atts['class']          = 'dropdown-toggle';
         } else {

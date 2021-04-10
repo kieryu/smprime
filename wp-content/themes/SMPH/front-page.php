@@ -195,7 +195,7 @@
 
 			<?php 
 
-				$certain_pages = array(2735,3744,3788,3972);
+				$certain_pages = array(2317,363,2332);
 				foreach( $certain_pages as $a_page ) {
 				    $special_tabs = new WP_Query('page_id='.$a_page);
 				    if ($special_tabs->have_posts()) : while ($special_tabs->have_posts()) : $special_tabs->the_post();
@@ -207,7 +207,7 @@
 								<?php the_post_thumbnail('full'); ?>
 							<?php } ?> 			
 						</div>
-						<h4 class="title"><?= the_title(); ?></h4>
+						<h4 class="title"><?= $fields['banner_title']; ?></h4>
 					</a>
 
 			<?php
@@ -215,6 +215,13 @@
 				}
 				wp_reset_postdata(); 
 			?>
+
+				<a href="https://smprimecareers.com/smprime" class="our-business-wrapper col-md-3">
+					<div class="img-wrapper">
+						<img src="<?= get_template_directory_uri().'/assets/images/careers.jpg'; ?>" alt="">			
+					</div>
+					<h4 class="title">Careers</h4>
+				</a>
 
 			</div>
 

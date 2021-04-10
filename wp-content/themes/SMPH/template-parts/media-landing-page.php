@@ -1,7 +1,7 @@
 <?php
-	$post_type = ($_GET['type']) ? $_GET['type'] : 'pressRelease';
+	$post_type = ($_GET['type']) ? $_GET['type'] : 'companyRelease';
 
-	if($post_type == 'pressRelease') {
+	if($post_type == 'companyRelease') {
 		$post_type = 'press_release';
 	} else if($post_type == 'latestNews') {
 		$post_type = 'latest_news';
@@ -14,9 +14,9 @@
 	<div class="smph-inner-container">
 
 		<ul class="nav media-tabs">
-			<li><a href="#pressRelease" id="pressRelease_link" class="nav-link active">Press Release</a></li>
-			<li><a href="#stories" id="stories_link" class="nav-link">Stories</a></li>
-			<li><a href="#socialMedia" id="socialMedia_link" class="nav-link">Social Media</a></li>
+			<li><a href="#companyRelease" id="companyRelease_link" class="nav-link active">Company Releases</a></li>
+			<!-- <li><a href="#stories" id="stories_link" class="nav-link">Stories</a></li> -->
+			<!-- <li><a href="#socialMedia" id="socialMedia_link" class="nav-link">Social Media</a></li> -->
 			<!-- <li><a href="#videos" id="videos_link" class="nav-link">Videos</a></li> -->
 			<li><a href="<?= get_site_url().'/media/multimedia'; ?>" class="nav-link">Multimedia</a></li>
 			<li><a href="#latestNews" id="latestNews_link" class="nav-link">Latest News</a></li>
@@ -46,13 +46,13 @@
 
 <section class="smph-wrapper media-tabs-content">
 
-		<?php include('media-press-release.php'); ?>
+		<?php include('media-company-releases.php'); ?>
 
 		<?php include('media-stories.php'); ?>
 
 		<?php include('media-social-media.php'); ?>
 
-		<?php //include('media-videos.php'); ?>
+		<?php include('media-videos.php'); ?>
 
 		<?php include('media-latest-news.php'); ?>
 

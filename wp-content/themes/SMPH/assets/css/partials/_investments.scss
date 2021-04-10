@@ -224,6 +224,21 @@
   	}
   	&.cta-banner-key-2 {
   		.cta-banner-content {
+  	    margin-left: 75%;
+		    margin-bottom: 10%;
+		    @include breakpoint(tabletLandscape) {
+		    	margin-left: 62%;
+		    }
+		    @include breakpoint(tabletPortrait) {
+		    	margin-bottom: 0;
+		    }
+		    @include breakpoint(mobile) {
+		    	margin-left: 0;
+		    }
+  		}
+  	}
+  	&.cta-banner-key-3 {
+  		.cta-banner-content {
 	      flex-direction: row-reverse;
 				margin-left: auto;
 				margin-top: 6rem;
@@ -238,21 +253,6 @@
 		  		}
 	  		}
       }
-  	}
-  	&.cta-banner-key-3 {
-  		.cta-banner-content {
-  	    margin-left: 75%;
-		    margin-bottom: 10%;
-		    @include breakpoint(tabletLandscape) {
-		    	margin-left: 62%;
-		    }
-		    @include breakpoint(tabletPortrait) {
-		    	margin-bottom: 0;
-		    }
-		    @include breakpoint(mobile) {
-		    	margin-left: 0;
-		    }
-  		}
   	}
   }
 }

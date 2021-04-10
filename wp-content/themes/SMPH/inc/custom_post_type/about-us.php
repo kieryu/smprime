@@ -49,7 +49,7 @@ function smph_cpt_award_citation() {
 add_action( 'init', 'smph_cpt_award_citation' );
 
 
-// ------------ AWARDS AND CITATIONS CPT -------------
+// ------------ HISTORY CPT -------------
 
 function smph_cpt_history() {
 	// Set the labels, this variable is used in the $args array

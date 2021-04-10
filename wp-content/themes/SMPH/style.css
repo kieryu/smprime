@@ -365,7 +365,7 @@ BREAKPOINTS
 }
 .our-business .our-business-wrapper img {
   width: 100%;
-  height: 20vw;
+  height: 18vw;
   object-fit: cover;
 }
 
@@ -664,6 +664,9 @@ BREAKPOINTS
   list-style: none;
   column-count: 2;
   column-width: 200px;
+}
+.main-header .dropdown .submenu-content ul.single-column {
+  column-count: 1;
 }
 @media (max-width: 767px) {
   .main-header .dropdown .submenu-content ul {
@@ -8784,6 +8787,93 @@ figcaption {
   font-family: "AvenirNextLTPro_Demi", sans-serif;
 }
 
+.programs-schedule-accordion .accordion-chevron-wrapper {
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #d6d3d3;
+}
+.programs-schedule-accordion .accordion-chevron-wrapper:first-of-type {
+  border-top: 1px solid #d6d3d3;
+}
+.programs-schedule-accordion .accordion-chevron-wrapper .card-header {
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+}
+.programs-schedule-accordion .accordion-chevron-wrapper .card-header button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 18px;
+  color: #1E398D;
+  font-family: "AvenirNextLTPro_Bold", sans-serif;
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
+  padding: 10px 0;
+}
+.programs-schedule-accordion .accordion-chevron-wrapper .card-header button .fa {
+  color: #2070C1;
+}
+.programs-schedule-accordion .accordion-chevron-wrapper .card-body {
+  padding: 1.25rem 0;
+}
+.programs-schedule-accordion .accordion-chevron-wrapper .card-body p, .programs-schedule-accordion .accordion-chevron-wrapper .card-body li {
+  font-family: "AvenirNextLTPro_Regular", sans-serif;
+  font-size: 14px;
+}
+.programs-schedule-accordion table {
+  width: 100%;
+}
+.programs-schedule-accordion table td, .programs-schedule-accordion table th {
+  padding: 10px 15px;
+  border-bottom: 1px solid #FFF !important;
+  border-right: 1px solid #FFF !important;
+}
+.programs-schedule-accordion table td:last-of-type, .programs-schedule-accordion table th:last-of-type {
+  border-right: 0 !important;
+}
+.programs-schedule-accordion table td {
+  background-color: #F2F2F2;
+  font-family: "AvenirNextLTPro_Regular", sans-serif;
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  .programs-schedule-accordion table td {
+    font-size: 14px;
+  }
+}
+.programs-schedule-accordion table td a {
+  color: #2070C1;
+  text-decoration: none;
+}
+.programs-schedule-accordion table th {
+  font-family: "AvenirNextLTPro_Regular", sans-serif;
+  white-space: nowrap;
+  background-color: #DCECFC;
+}
+.programs-schedule-accordion table.tbl-colspan {
+  padding-top: 50px;
+}
+@media (max-width: 576px) {
+  .programs-schedule-accordion table.tbl-colspan.w-120 table {
+    width: 120%;
+  }
+}
+.programs-schedule-accordion table.tbl-colspan table {
+  position: relative;
+}
+.programs-schedule-accordion table.tbl-colspan tr:first-of-type th {
+  text-align: center;
+  background-color: #1E398D;
+  color: #FFF;
+  font-family: "AvenirNextLTPro_Regular", sans-serif;
+  position: absolute;
+  top: -40px;
+  width: 100%;
+}
+
 .leadership-and-advisers .section-body {
   border-bottom: 1px solid #2070C1;
   padding-bottom: 15px;
@@ -10721,40 +10811,40 @@ figcaption {
   }
 }
 .page-id-2732 .cta-banner-link-out-with-numbers.cta-banner-key-2 .cta-banner-content {
+  margin-left: 75%;
+  margin-bottom: 10%;
+}
+@media (max-width: 1024px) {
+  .page-id-2732 .cta-banner-link-out-with-numbers.cta-banner-key-2 .cta-banner-content {
+    margin-left: 62%;
+  }
+}
+@media (max-width: 768px) {
+  .page-id-2732 .cta-banner-link-out-with-numbers.cta-banner-key-2 .cta-banner-content {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 576px) {
+  .page-id-2732 .cta-banner-link-out-with-numbers.cta-banner-key-2 .cta-banner-content {
+    margin-left: 0;
+  }
+}
+.page-id-2732 .cta-banner-link-out-with-numbers.cta-banner-key-3 .cta-banner-content {
   flex-direction: row-reverse;
   margin-left: auto;
   margin-top: 6rem;
 }
 @media (max-width: 576px) {
-  .page-id-2732 .cta-banner-link-out-with-numbers.cta-banner-key-2 .cta-banner-content {
+  .page-id-2732 .cta-banner-link-out-with-numbers.cta-banner-key-3 .cta-banner-content {
     margin-top: 3rem;
   }
 }
-.page-id-2732 .cta-banner-link-out-with-numbers.cta-banner-key-2 .cta-banner-content .numbers-content {
+.page-id-2732 .cta-banner-link-out-with-numbers.cta-banner-key-3 .cta-banner-content .numbers-content {
   margin-left: 0;
   margin-right: 30px;
 }
-.page-id-2732 .cta-banner-link-out-with-numbers.cta-banner-key-2 .cta-banner-content .numbers-content .numbers-wrapper {
+.page-id-2732 .cta-banner-link-out-with-numbers.cta-banner-key-3 .cta-banner-content .numbers-content .numbers-wrapper {
   width: 100%;
-}
-.page-id-2732 .cta-banner-link-out-with-numbers.cta-banner-key-3 .cta-banner-content {
-  margin-left: 75%;
-  margin-bottom: 10%;
-}
-@media (max-width: 1024px) {
-  .page-id-2732 .cta-banner-link-out-with-numbers.cta-banner-key-3 .cta-banner-content {
-    margin-left: 62%;
-  }
-}
-@media (max-width: 768px) {
-  .page-id-2732 .cta-banner-link-out-with-numbers.cta-banner-key-3 .cta-banner-content {
-    margin-bottom: 0;
-  }
-}
-@media (max-width: 576px) {
-  .page-id-2732 .cta-banner-link-out-with-numbers.cta-banner-key-3 .cta-banner-content {
-    margin-left: 0;
-  }
 }
 
 .page-id-3788 .cta-banner-link-out-with-numbers.cta-banner-key-0 .cta-banner-content {
@@ -12613,6 +12703,41 @@ figcaption {
   font-family: "AvenirNextLTPro_Bold", sans-serif;
   font-size: 26px;
   text-align: center;
+}
+
+.sm-cares-container {
+  background-color: #e2e3e7;
+  padding: 30px 0;
+}
+.sm-cares-container .col-md-4:nth-last-child(-n+3) .sm-cares-wrapper {
+  margin-bottom: 0;
+}
+.sm-cares-container .sm-cares-wrapper {
+  max-width: 75%;
+  margin: auto;
+  text-align: center;
+  margin: 10px auto 10px;
+}
+@media (max-width: 576px) {
+  .sm-cares-container .sm-cares-wrapper {
+    max-width: 100%;
+  }
+}
+.sm-cares-container .sm-cares-wrapper .title {
+  font-family: "AvenirNextLTPro_Demi", sans-serif;
+  font-size: 16px;
+  color: #1E398D;
+}
+.sm-cares-container .sm-cares-wrapper img {
+  width: 100%;
+  height: auto;
+}
+.sm-cares-container .sm-cares-wrapper .desc {
+  font-family: "AvenirNextLTPro_Regular", sans-serif;
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+  margin: 10px 0 10px;
 }
 
 .hide {

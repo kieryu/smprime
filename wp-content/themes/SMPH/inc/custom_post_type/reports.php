@@ -48,36 +48,6 @@ function smph_cpt_sustainability_reports() {
 	register_post_type( 'sustain_reports', $args);
 }
 add_action( 'init', 'smph_cpt_sustainability_reports' );
- 
-//create a custom taxonomy name it "Report Year" for your posts
-function taxonomy_sustainability_reports() {
- 
-  $labels = array(
-    'name' => _x( 'Reports Year', 'taxonomy general name' ),
-    'singular_name' => _x( 'Report Year', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search Reports Year' ),
-    'all_items' => __( 'All Reports Year' ),
-    'parent_item' => __( 'Parent Reports Year' ),
-    'parent_item_colon' => __( 'Parent Report Year:' ),
-    'edit_item' => __( 'Edit Report Year' ), 
-    'update_item' => __( 'Update Report Year' ),
-    'add_new_item' => __( 'Add New Report Year' ),
-    'new_item_name' => __( 'New Report Year Name' ),
-    'menu_name' => __( 'Reports Year' ),
-  ); 	
- 
-  register_taxonomy('reports_year',array('sustain_reports'), array(
-    'hierarchical' => true,
-    'show_in_rest' => true,
-    'labels' => $labels,
-    'show_ui' => true,
-    'show_admin_column' => true,
-    'query_var' => true,
-    'rewrite' => array( 'slug' => 'reports_year' ),
-  ));
-}
-// Create Taxonomy for Custom Post Type
-add_action( 'init', 'taxonomy_sustainability_reports', 0 );
 
 // ------------ANNUAL REPORTS CPT ------------
 function smph_cpt_annual_reports() {

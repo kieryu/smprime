@@ -1,5 +1,6 @@
 
 <div id="videos" class="media-tabs-wrapper">
+	<div class="smph-inner-subcontainer">
 
 	<?php
 
@@ -120,4 +121,5 @@
 	<?php wp_reset_postdata(); } else { ?>
 		<p class="no-post">No Content Found.</p>
 	<?php } ?>
+</div>
 </div>

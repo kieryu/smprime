@@ -1,0 +1,36 @@
+.sm-cares-container {
+  background-color: #e2e3e7;
+  padding: 30px 0;
+  .col-md-4 {
+  	&:nth-last-child(-n+3) {
+  		.sm-cares-wrapper { 
+  			margin-bottom: 0;
+  		}
+		}
+  }
+	.sm-cares-wrapper {
+    max-width: 75%;
+		margin: auto;
+		text-align: center;
+		margin: 10px auto 10px;
+		@include breakpoint(mobile) {
+			max-width: 100%;
+		}
+		.title {
+			font-family: $avenirNext_Demi;
+			font-size: 16px;
+			color: $dark_blue;
+		}
+		img {
+			width: 100%;
+	    height: auto;
+		}
+		.desc {
+			font-family: $avenirNext_Regular;
+			font-size: 16px;
+			color: #333;
+			text-align: left;
+			margin: 10px 0 10px;
+		}
+	}
+}

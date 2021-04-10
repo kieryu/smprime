@@ -1,5 +1,5 @@
 
-<section class="smph-wrapper governance-quicklinks">
+<section class="smph-wrapper custom-quicklinks">
 	<div class="smph-inner-subcontainer">
 		<div class="quicklinks-container">
 			<div class="row">
@@ -35,7 +35,7 @@
 	<div class="smph-inner-subcontainer">
 		<div class="cta-banner-content">
 			<h2>Our Businesses</h2>
-			<p><a class="smph-btn white-btn" href="<?= get_site_url().'/about-us/our-investments'; ?>">Discover More</a></p>
+			<p><a class="smph-btn white-btn" href="<?= get_site_url().'/about-us/our-businesses'; ?>">Discover More</a></p>
 		</div>
 	</div>
 </section>

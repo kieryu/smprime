@@ -294,3 +294,100 @@
 		}
 	}
 }
+
+
+
+.programs-schedule-accordion {
+	.accordion-chevron-wrapper {
+		border: 0;
+		border-radius: 0;
+  	border-bottom: 1px solid #d6d3d3;
+  	&:first-of-type {
+	   	border-top: 1px solid #d6d3d3;
+  	}
+		.card-header {
+			background-color: transparent;
+			padding: 0;
+			border: 0;
+			button {
+				display: flex;
+		    align-items: center;
+		    justify-content: space-between;
+		    width: 100%;
+		    font-size: 18px;
+		    color: $dark_blue;
+		    font-family: $avenirNext_Bold;
+	    	text-decoration: none;
+	    	outline: 0;
+	    	box-shadow: none;
+		  	padding: 10px 0;
+		    .fa {
+		    	color: $blue;
+		    }
+			}
+		}
+		.card-body {
+			padding: 1.25rem 0;
+			p,li {
+				font-family: $avenirNext_Regular;
+		    font-size: 14px;
+			}
+
+		}
+	}
+	table {
+		width: 100%;
+		td,th {
+			padding: 10px 15px;
+	    border-bottom: 1px solid #FFF !important;
+	    border-right: 1px solid #FFF !important;
+	    &:last-of-type {
+	    	border-right: 0 !important;
+	    }
+		}
+		td {
+			background-color: #F2F2F2;
+			font-family: $avenirNext_Regular;
+			font-size: 16px;
+			@include breakpoint(tabletPortrait) {
+				font-size: 14px;
+			}
+			a {
+				color: $blue;
+				text-decoration: none;
+			}
+		}
+		th {
+	    font-family: $avenirNext_Regular;
+	    white-space: nowrap;
+	    background-color: $lighter_blue;
+		}
+		&.tbl-colspan {
+			padding-top: 50px;
+			&.w-120 {
+				table {
+					@include breakpoint(mobile) {
+						width: 120%;
+					}
+				}
+			}
+			table {
+				position: relative;
+			}
+			tr {
+				&:first-of-type {
+					th {
+				    text-align: center;
+				    background-color: $dark_blue;
+				    color: #FFF;
+				    font-family: $avenirNext_Regular;
+				    position: absolute;
+				    top: -40px;
+				    width: 100%;
+					}
+				}
+			}
+		}
+	}
+	
+}

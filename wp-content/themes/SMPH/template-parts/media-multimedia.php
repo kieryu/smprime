@@ -61,24 +61,3 @@
 	</div>
 </section>
 <?php endif;wp_reset_postdata(); ?>
-
-
-<section class="speeches-container">
-	<div class="smph-inner-subcontainer">
-		<div class="row">
-			<div class="col-md-4 speeches-details">
-				<div class="info-content">
-					<h4 class="title">Speeches</h4>
-					<p>Selected speeches by <br/>SM Leadership Team</p>
-					<a href="<?= get_site_url().'/media/multimedia/speeches'; ?>" class="smph-btn blue-btn">Read here</a>
-				</div>
-			</div>
-			<div class="col-md-4 img-wrapper">
-        <img src="<?= get_template_directory_uri().'/assets/images/sdg/1-Teresita Sy Coson.jpg' ?>" alt="">
-			</div>
-			<div class="col-md-4 img-wrapper">
-        <img src="<?= get_template_directory_uri().'/assets/images/sdg/3-Hans Sy.jpg' ?>" alt="">
-			</div>
-		</div>
-	</div>
-</section>

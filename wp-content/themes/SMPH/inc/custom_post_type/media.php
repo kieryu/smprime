@@ -41,6 +41,45 @@ function smph_cpt_press_release() {
 add_action( 'init', 'smph_cpt_press_release' );
 
 
+// ------------COMPANY RELEASE CPT ------------
+
+function smph_cpt_company_releases() {
+	// Set the labels, this variable is used in the $args array
+	$labels = array(
+		'name'               => __( 'Company Release' ),
+		'singular_name'      => __( 'Company Release' ),
+		'add_new'            => __( 'Add New Company Release' ),
+		'add_new_item'       => __( 'Add New Company Release' ),
+		'edit_item'          => __( 'Edit Company Release' ),
+		'new_item'           => __( 'New Company Release' ),
+		'all_items'          => __( 'All Company Release' ),
+		'view_item'          => __( 'View Company Release' ),
+		'search_items'       => __( 'Search Company Release' ),
+	);
+	// The arguments for our post type, to be entered as parameter 2 of register_post_type()
+	$args = array(
+		'labels'            => $labels,
+		'description'       => 'Custom Company Release',
+		'public'            => true,
+		'menu_position'     => 5,
+		'supports'          => array( 'title', 'editor','excerpt','revisions'),
+		'menu_icon'         => 'dashicons-welcome-write-blog',
+		'has_archive'       => true,
+		'show_in_admin_bar' => true,
+		'show_in_nav_menus' => true,
+		'show_in_rest'      => true,
+		'query_var'         => true,
+    'has_archive' => 'Company Release',
+		'show_in_menu' => 'media-type-sections',	);
+
+	// Call the actual WordPress function
+	// Parameter 1 is a name for the post type
+	// Parameter 2 is the $args array
+	register_post_type( 'company_releases', $args);
+}
+add_action( 'init', 'smph_cpt_company_releases' );
+
+
 
 // ------------STORIES CPT ------------
 

@@ -10,8 +10,6 @@
 	);
   $cpt_query = new WP_Query($cpt_arg);
 
-  print '<pre>';print_r($cpt_query);print '</pre>';
-
 ?>
 
 <section class="smph-wrapper custom-quicklinks">

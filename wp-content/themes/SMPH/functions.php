@@ -214,3 +214,4 @@ function so48515097_cf7_select_values($tag)
     return $tag;
 }
 add_filter('wpcf7_form_tag', 'so48515097_cf7_select_values', 10);
+

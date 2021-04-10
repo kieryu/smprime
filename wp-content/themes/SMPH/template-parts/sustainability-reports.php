@@ -42,62 +42,6 @@
 	</section>
 <?php endif; //if has featured reports  ?>
 
-
-<?php
-
-	// GET LATEST YEAR
-	$max_year = array();
-	$max_year_obj =  get_terms( 'reports_year', array('hide_empty' => false) );
-	$max_year[''] = '-';
-	foreach ($max_year_obj as $partner) {
-	    $max_year[$partner->term_id] = $partner->name;;
-	}
-	$max_year = max($max_year);
-	/* DISPLAY Reports */
-	$cpt_arg = array(
-		'post_type' => 'sustain_reports', 
-		'post_status' => 'publish', 
-  	'posts_per_page' => -1,
-  	'tax_query' => array(
-        array(
-            'taxonomy' => 'reports_year',
-            'field'    => 'name',
-            'terms'    => $max_year,
-        ),
-    ),
-		'order' => 'DESC'
-	);
-  $cpt_query = new WP_Query($cpt_arg);
-
-?>
-<section class="smph-wrapper latest-reports reports-file-wrapper">
-	<div class="smph-inner-subcontainer">
-		<div class="section-title">
-			<h2 class="title"><?= $max_year ?> Sustainability Reports</h2>
-		</div>
-		<div class="section-body">
-				
-			<div class="reports-container">
-				<?php if ($cpt_query->have_posts()) : while ($cpt_query->have_posts()) : $cpt_query->the_post();  ?>
-					<?php $report_file = get_post_meta(get_the_ID(),'report_file_post'); ?>
-					<a href="<?= $report_file[0]; ?>" target="_blank" class="reports-wrapper">
-						<div class="img-wrapper">
-							<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it. ?> 
-								<?php the_post_thumbnail('full'); ?>
-							<?php } ?> 
-						</div>
-						<div class="info">
-							<h4 class="title"><?= the_title(); ?></h5>
-							<p class="download" ><i class="fa fa-file-download"></i> Download PDF</p>
-						</div>
-					</a>
-			  <?php endwhile; endif; wp_reset_postdata(); ?>
-			</div>
-
-		</div>
-	</div>
-</section>
-
 <?php
 
 	/* DISPLAY Reports */
@@ -105,14 +49,6 @@
 		'post_type' => 'sustain_reports', 
 		'post_status' => 'publish', 
   	'posts_per_page' => -1,
-  	'tax_query' => array(
-        array(
-            'taxonomy' => 'reports_year',
-            'field'    => 'name',
-            'terms'    => $max_year,
-            'operator'  => 'NOT IN'
-        ),
-    ),
 		'order' => 'DESC'
 	);
   $cpt_query = new WP_Query($cpt_arg);
